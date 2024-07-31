@@ -10,6 +10,7 @@ import tempfile
 import time
 from pathlib import Path
 
+from protos.altera_agents import observations_pb2, actions_pb2
 import openai
 
 from agent import (
@@ -17,6 +18,7 @@ from agent import (
     PromptAgent,
     TeacherForcingAgent,
     construct_agent,
+    AlteraAgent,
 )
 from agent.prompts import *
 from browser_env import (
@@ -91,7 +93,7 @@ def config() -> argparse.Namespace:
     parser.add_argument("--max_steps", type=int, default=30)
 
     # agent config
-    parser.add_argument("--agent_type", type=str, default="prompt")
+    parser.add_argument("--agent_type", type=str, default="altera")
     parser.add_argument(
         "--instruction_path",
         type=str,
@@ -216,7 +218,7 @@ def early_stop(
 
 def test(
     args: argparse.Namespace,
-    agent: Agent | PromptAgent | TeacherForcingAgent,
+    agent: Agent | PromptAgent | TeacherForcingAgent | AlteraAgent,
     config_file_list: list[str],
 ) -> None:
     scores = []
@@ -284,6 +286,7 @@ def test(
             trajectory.append(state_info)
 
             meta_data = {"action_history": ["None"]}
+            print("Starting agent steps")
             while True:
                 early_stop_flag, stop_info = early_stop(
                     trajectory, max_steps, early_stop_thresholds
@@ -306,9 +309,7 @@ def test(
                     action,
                     state_info["info"]["observation_metadata"],
                     action_set_tag=args.action_set_tag,
-                    prompt_constructor=agent.prompt_constructor
-                    if isinstance(agent, PromptAgent)
-                    else None,
+                    prompt_constructor=agent.prompt_constructor if isinstance(agent, PromptAgent) else None
                 )
                 render_helper.render(
                     action, state_info, meta_data, args.render_screenshot

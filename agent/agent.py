@@ -1,6 +1,7 @@
 import argparse
 import json
 from typing import Any
+import asyncio
 
 import tiktoken
 from beartype import beartype
@@ -23,6 +24,14 @@ from llms import (
     lm_config,
 )
 from llms.tokenizers import Tokenizer
+from websockets.sync.client import connect
+import websockets
+from protos.altera_agents import observations_pb2, actions_pb2
+from google.protobuf.struct_pb2 import Struct
+
+import nest_asyncio
+nest_asyncio.apply()
+
 
 
 class Agent:
@@ -156,6 +165,73 @@ class PromptAgent(Agent):
     def reset(self, test_config_file: str) -> None:
         pass
 
+class AlteraAgent(Agent):
+
+    @beartype
+    def __init__(
+        self,
+        game_env,
+        action_space,
+    ) -> None:
+        super().__init__()
+        self.game_env = game_env
+        self.action_space = action_space
+
+    def set_action_set_tag(self, tag: str) -> None:
+        self.action_set_tag = tag
+
+    @beartype
+    def next_action(
+        self, trajectory: Trajectory, intent: str, meta_data: dict[str, Any]
+    ) -> Action:
+        uri = "ws://localhost:8765"
+        state_info: StateInfo = trajectory[-1] 
+        page = state_info["info"]["page"]
+        url = page.url
+        web_tree = state_info["observation"]["text"]
+        async def async_next_action():
+            while True:
+                try:
+                    async with websockets.connect(uri) as websocket:
+                        # Create a Protobuf message
+                        message = observations_pb2.AgentObservation()
+                        message.agent_id = "webb"
+                        message.observation_type = observations_pb2.AGENT_OBSERVATION_ENVIRONMENT_INFORMATION
+                        web_struct = Struct()
+                        web_struct.update({'url': "www.google.com"})
+                        web_struct['action_space'] = self.action_space
+                        web_struct['game_env'] = self.game_env
+                        web_struct['intention'] = intent
+                        web_struct['website_tree'] = web_tree
+                        message.environment_information.structured_information.CopyFrom(web_struct)
+                        # Serialize the message to binary
+                        print(f"Sending \n {message}")
+                        message_bytes = message.SerializeToString()
+                        # Send the message
+                        await websocket.send(message_bytes)
+                        while True:
+                            # Receive a response (if expected)
+                            response = await websocket.recv()
+                            print(f"Response: {response}")
+
+                            # Deserialize the received message
+                            response_message = actions_pb2.AgentAction()
+                            response_message.ParseFromString(response)
+
+                            if response_message.action_type == actions_pb2.AGENT_ACTION_PERFORM_SKILL:
+                                action_response = response_message.perform_skill.message
+                                print(f"Received: {action_response}")
+                                return action_response
+                except (websockets.ConnectionClosedError, websockets.InvalidURI, websockets.InvalidHandshake) as e:
+                    print(f"Connection error: {e}. Reconnecting in {SLEEP} seconds...")
+                    await asyncio.sleep(SLEEP)
+
+        response = asyncio.get_event_loop().run_until_complete(async_next_action())
+        return response
+
+    def reset(self, test_config_file: str) -> None:
+        pass
+
 
 def construct_agent(args: argparse.Namespace) -> Agent:
     llm_config = lm_config.construct_llm_config(args)
@@ -173,8 +249,14 @@ def construct_agent(args: argparse.Namespace) -> Agent:
         agent = PromptAgent(
             action_set_tag=args.action_set_tag,
             lm_config=llm_config,
-            prompt_constructor=prompt_constructor,
+            prompt_constructor = prompt_constructor,
         )
+    elif args.agent_type == "altera":
+        with open(args.instruction_path) as f:
+            file = json.load(f)
+            game_env = file['game_env']
+            action_space = file['action_space']
+        agent = AlteraAgent(game_env, action_space)
     else:
         raise NotImplementedError(
             f"agent type {args.agent_type} not implemented"
