@@ -4,6 +4,7 @@ from typing import Any
 import asyncio
 
 import tiktoken
+import time 
 from beartype import beartype
 
 from agent.prompts import *
@@ -26,6 +27,7 @@ from llms import (
 from llms.tokenizers import Tokenizer
 from websockets.sync.client import connect
 import websockets
+from websocket import create_connection
 from protos.altera_agents import observations_pb2, actions_pb2
 from google.protobuf.struct_pb2 import Struct
 
@@ -211,42 +213,79 @@ class AlteraAgent(Agent):
         page = state_info["info"]["page"]
         url = page.url
         web_tree = state_info["observation"]["text"]
-        async def async_next_action():
-            while True:
+        
+        async def handle_send():
+            pass
+        
+        async def handle_receive():
+            pass
+
+        MAX_RETRIES = 10
+        RETRY_DELAY = 1
+
+        async def connect():
+            for attempt in range(MAX_RETRIES):
                 try:
-                    async with websockets.connect(uri) as websocket:
-                        # Create a Protobuf message
-                        message = observations_pb2.AgentObservation()
-                        message.agent_id = "webb"
-                        message.observation_type = observations_pb2.AGENT_OBSERVATION_ENVIRONMENT_INFORMATION
-                        web_struct = Struct()
-                        web_struct.update({'url': "www.google.com"})
-                        web_struct['actionSpace'] = self.action_space
-                        web_struct['gameEnv'] = self.game_env
-                        web_struct['intention'] = intent
-                        web_struct['websiteTree'] = web_tree
-                        message.environment_information.structured_information.CopyFrom(web_struct)
-                        # Serialize the message to binary
-                        message_bytes = message.SerializeToString()
-                        # Send the message
-                        await websocket.send(message_bytes)
-                        print(f"Message sent!")
-                        while True:
-                            # Receive a response (if expected)
-                            response = await websocket.recv()
-                            print(f"Response: {response}")
+                    return await websockets.connect(uri)
+                except Exception as e:
+                    print(f"Connection attempt {attempt + 1} failed: {e}")
+                    if attempt < MAX_RETRIES - 1:
+                        await asyncio.sleep(RETRY_DELAY)
+            raise Exception("Failed to connect after maximum retries")
 
-                            # Deserialize the received message
-                            response_message = actions_pb2.AgentAction()
-                            response_message.ParseFromString(response)
+        async def async_next_action():
+            async def send_message(ws):
+                message = observations_pb2.AgentObservation()
+                message.agent_id = "webb"
+                message.observation_type = observations_pb2.AGENT_OBSERVATION_ENVIRONMENT_INFORMATION
+                web_struct = Struct()
+                web_struct.update({
+                    'url': url,
+                    'actionSpace': self.action_space,
+                    'gameEnv': self.game_env,
+                    'intention': intent,
+                    'websiteTree': web_tree,
+                })
+                message.environment_information.structured_information.CopyFrom(web_struct)
+                message_bytes = message.SerializeToString()
+                await ws.send(message_bytes)
+                print("Message sent!")
 
-                            if response_message.action_type == actions_pb2.AGENT_ACTION_PERFORM_SKILL:
-                                action_response = response_message.perform_skill.message
-                                print(f"Received: {action_response}")
-                                return action_response
-                except (websockets.ConnectionClosedError, websockets.InvalidURI, websockets.InvalidHandshake) as e:
-                    print(f"Connection error: {e}. Reconnecting in 1 seconds...")
-                    await asyncio.sleep(1)
+            async def receive_message(ws):
+                
+                response = await ws.recv()
+                response_message = actions_pb2.AgentAction()
+                response_message.ParseFromString(response)
+
+                if response_message.action_type == actions_pb2.AGENT_ACTION_PERFORM_SKILL:
+                    action_response = response_message.perform_skill.message
+                    # return action_response
+                # return None
+
+            ws = None
+            try:
+                ws = await connect()
+                await send_message(ws)
+                start = time.time()
+                while True:
+                    try:
+                        result = await asyncio.wait_for(receive_message(ws), timeout=5)
+                        if result:
+                            print(f"Received: {action_response} after {int(time.time()-start)} s")
+                            return result
+                    except asyncio.TimeoutError:
+                        print("Timeout while waiting for response, retrying...")
+                    except Exception as e:
+                        print(f"Error while receiving message: {e}")
+                        ws = await connect()
+                        # await send_message(ws)
+            finally:
+                if ws:
+                    await ws.close()
+                            
+            # except (websockets.ConnectionClosedError, websockets.InvalidURI, websockets.InvalidHandshake) as e:
+            #     print(f"Connection error: {e}. Reconnecting in 0.005 seconds...")
+            #     await asyncio.sleep(0.005)
 
         response = asyncio.get_event_loop().run_until_complete(async_next_action())
         n = 0
@@ -264,7 +303,6 @@ class AlteraAgent(Agent):
                 )
             action["raw_prediction"] = response
         except ActionParsingError as e:
-            print("Parsing error")
             action = create_none_action()
             action["raw_prediction"] = response
 
