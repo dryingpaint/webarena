@@ -286,7 +286,6 @@ def test(
             trajectory.append(state_info)
 
             meta_data = {"action_history": ["None"]}
-            print("Starting agent steps")
             while True:
                 early_stop_flag, stop_info = early_stop(
                     trajectory, max_steps, early_stop_thresholds
@@ -319,7 +318,10 @@ def test(
                 if action["action_type"] == ActionTypes.STOP:
                     break
 
+                print(f"Starting step")
+                start = time.time()
                 obs, _, terminated, _, info = env.step(action)
+                print(f"Finished step: {int(time.time()-start)} s")
                 state_info = {"observation": obs, "info": info}
                 trajectory.append(state_info)
 

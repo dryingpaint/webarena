@@ -176,9 +176,31 @@ class AlteraAgent(Agent):
         super().__init__()
         self.game_env = game_env
         self.action_space = action_space
+        self.action_set_tag = "id_accessibility_tree"
 
     def set_action_set_tag(self, tag: str) -> None:
         self.action_set_tag = tag
+
+    def extract_action(self, raw_response: str):
+        # pattern = rf"```((.|\n)*?)```"
+        # match = re.search(pattern, response)
+        # if match:
+        #     return match.group(1).strip()
+        # else:
+        #     raise ActionParsingError(
+        #         f'Cannot find the answer phrase "{self.answer_phrase}" in "{response}"'
+        #     )
+        response = raw_response.split(" ")
+        if len(response) > 1:
+            if "[" not in response[1]:
+                params = f"[{']['.join(response[1:])}]"
+            else:
+                params = " ".join(response[1:])
+            out = f"{response[0]} {params}"
+            print(out)
+            return out
+        else:
+            return response[0]
 
     @beartype
     def next_action(
@@ -199,16 +221,16 @@ class AlteraAgent(Agent):
                         message.observation_type = observations_pb2.AGENT_OBSERVATION_ENVIRONMENT_INFORMATION
                         web_struct = Struct()
                         web_struct.update({'url': "www.google.com"})
-                        web_struct['action_space'] = self.action_space
-                        web_struct['game_env'] = self.game_env
+                        web_struct['actionSpace'] = self.action_space
+                        web_struct['gameEnv'] = self.game_env
                         web_struct['intention'] = intent
-                        web_struct['website_tree'] = web_tree
+                        web_struct['websiteTree'] = web_tree
                         message.environment_information.structured_information.CopyFrom(web_struct)
                         # Serialize the message to binary
-                        print(f"Sending \n {message}")
                         message_bytes = message.SerializeToString()
                         # Send the message
                         await websocket.send(message_bytes)
+                        print(f"Message sent!")
                         while True:
                             # Receive a response (if expected)
                             response = await websocket.recv()
@@ -223,11 +245,31 @@ class AlteraAgent(Agent):
                                 print(f"Received: {action_response}")
                                 return action_response
                 except (websockets.ConnectionClosedError, websockets.InvalidURI, websockets.InvalidHandshake) as e:
-                    print(f"Connection error: {e}. Reconnecting in {SLEEP} seconds...")
-                    await asyncio.sleep(SLEEP)
+                    print(f"Connection error: {e}. Reconnecting in 1 seconds...")
+                    await asyncio.sleep(1)
 
         response = asyncio.get_event_loop().run_until_complete(async_next_action())
-        return response
+        n = 0
+        try:
+            parsed_response = self.extract_action(
+                response
+            )
+            if self.action_set_tag == "id_accessibility_tree":
+                action = create_id_based_action(parsed_response)
+            elif self.action_set_tag == "playwright":
+                action = create_playwright_action(parsed_response)
+            else:
+                raise ValueError(
+                    f"Unknown action type {self.action_set_tag}"
+                )
+            action["raw_prediction"] = response
+        except ActionParsingError as e:
+            print("Parsing error")
+            action = create_none_action()
+            action["raw_prediction"] = response
+
+        print(f"Final action: {action}")
+        return action
 
     def reset(self, test_config_file: str) -> None:
         pass

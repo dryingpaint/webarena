@@ -1517,6 +1517,7 @@ def create_id_based_action(action_str: str) -> Action:
         case "hover":
             match = re.search(r"hover ?\[(\d+)\]", action_str)
             if not match:
+                print("Invalid hover action")
                 raise ActionParsingError(f"Invalid hover action {action_str}")
             element_id = match.group(1)
             return create_hover_action(element_id=element_id)
