@@ -236,6 +236,8 @@ class ScriptBrowserEnv(Env[dict[str, Observation], Action]):
 
         success = False
         fail_error = ""
+        print(f"Executing action")
+        start = time.time()
         try:
             self.page = execute_action(
                 action,
@@ -246,6 +248,7 @@ class ScriptBrowserEnv(Env[dict[str, Observation], Action]):
             success = True
         except Exception as e:
             fail_error = str(e)
+        print(f"Finished action after {int(time.time()-start)} s")
 
         # hard sleep TODO[shuyanzh] suboptimal, may need to check network
         if self.sleep_after_execution > 0:

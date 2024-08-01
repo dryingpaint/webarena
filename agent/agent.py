@@ -252,15 +252,15 @@ class AlteraAgent(Agent):
                 print("Message sent!")
 
             async def receive_message(ws):
-                
                 response = await ws.recv()
+                print(f"Receiving {response}")
                 response_message = actions_pb2.AgentAction()
                 response_message.ParseFromString(response)
 
                 if response_message.action_type == actions_pb2.AGENT_ACTION_PERFORM_SKILL:
                     action_response = response_message.perform_skill.message
-                    # return action_response
-                # return None
+                    return action_response
+                return None
 
             ws = None
             try:
@@ -271,12 +271,12 @@ class AlteraAgent(Agent):
                     try:
                         result = await asyncio.wait_for(receive_message(ws), timeout=5)
                         if result:
-                            print(f"Received: {action_response} after {int(time.time()-start)} s")
+                            print(f"Received: {result} after {int(time.time()-start)} s")
                             return result
                     except asyncio.TimeoutError:
-                        print("Timeout while waiting for response, retrying...")
-                    except Exception as e:
-                        print(f"Error while receiving message: {e}")
+                        print(f"Timeout while waiting for response, retrying... Client connection: {ws.open if ws else None}")
+                    except websockets.exceptions.ConnectionClosedOK:
+                        print(f"Normal connection close. Reconnecting...")
                         ws = await connect()
                         # await send_message(ws)
             finally:
