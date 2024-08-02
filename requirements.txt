@@ -11,3 +11,7 @@ flask
 nltk
 text-generation
 transformers==4.33.2
+websockets
+websocket
+websocket-client
+nest_asyncio

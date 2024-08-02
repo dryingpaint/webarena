@@ -174,11 +174,13 @@ class AlteraAgent(Agent):
         self,
         game_env,
         action_space,
+        port,
     ) -> None:
         super().__init__()
         self.game_env = game_env
         self.action_space = action_space
         self.action_set_tag = "id_accessibility_tree"
+        self.port = f"ws://localhost:{port}"
 
     def set_action_set_tag(self, tag: str) -> None:
         self.action_set_tag = tag
@@ -208,7 +210,7 @@ class AlteraAgent(Agent):
     def next_action(
         self, trajectory: Trajectory, intent: str, meta_data: dict[str, Any]
     ) -> Action:
-        uri = "ws://localhost:8765"
+        uri = self.port
         state_info: StateInfo = trajectory[-1] 
         page = state_info["info"]["page"]
         url = page.url
@@ -336,7 +338,7 @@ def construct_agent(args: argparse.Namespace) -> Agent:
             file = json.load(f)
             game_env = file['game_env']
             action_space = file['action_space']
-        agent = AlteraAgent(game_env, action_space)
+        agent = AlteraAgent(game_env, action_space, args.port)
     else:
         raise NotImplementedError(
             f"agent type {args.agent_type} not implemented"

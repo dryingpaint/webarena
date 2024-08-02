@@ -94,6 +94,7 @@ def config() -> argparse.Namespace:
 
     # agent config
     parser.add_argument("--agent_type", type=str, default="altera")
+    parser.add_argument("--port", type=int, default=8100)
     parser.add_argument(
         "--instruction_path",
         type=str,
