@@ -195,13 +195,15 @@ class AlteraAgent(Agent):
         #         f'Cannot find the answer phrase "{self.answer_phrase}" in "{response}"'
         #     )
         response = raw_response.split(" ")
+        out = response[0]
+        if out == 'type' or out == 'stop':
+            return raw_response
         if len(response) > 1:
-            if "[" not in response[1]:
-                params = f"[{']['.join(response[1:])}]"
-            else:
-                params = " ".join(response[1:])
-            out = f"{response[0]} {params}"
-            print(out)
+            for param in response[1:]:
+                if "[" not in param:
+                    out += f"[{param}]"
+                else:
+                    out += param
             return out
         else:
             return response[0]
@@ -255,7 +257,6 @@ class AlteraAgent(Agent):
 
             async def receive_message(ws):
                 response = await ws.recv()
-                print(f"Receiving {response}")
                 response_message = actions_pb2.AgentAction()
                 response_message.ParseFromString(response)
 
@@ -269,14 +270,19 @@ class AlteraAgent(Agent):
                 ws = await connect()
                 await send_message(ws)
                 start = time.time()
+                timeout = 0
                 while True:
                     try:
-                        result = await asyncio.wait_for(receive_message(ws), timeout=5)
+                        result = await asyncio.wait_for(receive_message(ws), timeout=10)
                         if result:
-                            print(f"Received: {result} after {int(time.time()-start)} s")
-                            return result
+                            action, reason = result.split('|')
+                            print(f"Received: {action}. {reason} after {int(time.time()-start)} s")
+                            return action
                     except asyncio.TimeoutError:
-                        print(f"Timeout while waiting for response, retrying... Client connection: {ws.open if ws else None}")
+                        timeout += 1
+                        if timeout%3==0:
+                            await send_message(ws)
+                        print(f"Timeout {timeout}, retrying... Client connection: {ws.open if ws else None}")
                     except websockets.exceptions.ConnectionClosedOK:
                         print(f"Normal connection close. Reconnecting...")
                         ws = await connect()
@@ -308,7 +314,7 @@ class AlteraAgent(Agent):
             action = create_none_action()
             action["raw_prediction"] = response
 
-        print(f"Final action: {action}")
+        print(f"Final action: {action['action_type']}")
         return action
 
     def reset(self, test_config_file: str) -> None:

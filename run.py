@@ -110,7 +110,7 @@ def config() -> argparse.Namespace:
         "--repeating_action_failure_th",
         help="When concesecutive repeating action exceeds this threshold, the agent will stop",
         type=int,
-        default=3,
+        default=5,
     )
 
     # lm config
@@ -243,7 +243,9 @@ def test(
         sleep_after_execution=args.sleep_after_execution,
     )
 
+    results = {}
     for config_file in config_file_list:
+        results[config_file] = {}
         try:
             render_helper = RenderHelper(
                 config_file, args.result_dir, args.action_set_tag
@@ -287,12 +289,14 @@ def test(
             trajectory.append(state_info)
 
             meta_data = {"action_history": ["None"]}
+            start_task = time.time()
             while True:
                 early_stop_flag, stop_info = early_stop(
                     trajectory, max_steps, early_stop_thresholds
                 )
 
                 if early_stop_flag:
+                    print(f"STOPPING EARLY BECAUSE {stop_info}")
                     action = create_stop_action(f"Early stop: {stop_info}")
                 else:
                     try:
@@ -319,10 +323,9 @@ def test(
                 if action["action_type"] == ActionTypes.STOP:
                     break
 
-                print(f"Starting step")
                 start = time.time()
                 obs, _, terminated, _, info = env.step(action)
-                print(f"Finished step: {int(time.time()-start)} s")
+                print(f"Finished step in {int(time.time()-start)} s")
                 state_info = {"observation": obs, "info": info}
                 trajectory.append(state_info)
 
@@ -341,10 +344,11 @@ def test(
 
             scores.append(score)
 
+            elapsed = int(time.time()-start_task)
             if score == 1:
-                logger.info(f"[Result] (PASS) {config_file}")
+                logger.info(f"[Result] (PASS) {config_file} after {elapsed} s")
             else:
-                logger.info(f"[Result] (FAIL) {config_file}")
+                logger.info(f"[Result] (FAIL) {config_file} after {elapsed} s")
 
             if args.save_trace_enabled:
                 env.save_trace(
