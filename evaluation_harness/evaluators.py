@@ -137,16 +137,40 @@ class StringEvaluator(Evaluator):
         for approach, value in configs["eval"]["reference_answers"].items():
             match approach:
                 case "exact_match":
-                    score *= self.exact_match(ref=value, pred=pred)
+                    if isinstance(value, list):
+                        for value in list:
+                            include = self.must_include(
+                                ref=must_value,
+                                pred=pred,
+                                tokenize=(len(value) == 1),
+                            )
+                            if include:
+                                break
+                        else:
+                            score = 0
+                    else:
+                        score *= self.exact_match(ref=value, pred=pred)
 
                 case "must_include":
                     assert isinstance(value, list)
                     for must_value in value:
-                        score *= self.must_include(
-                            ref=must_value,
-                            pred=pred,
-                            tokenize=(len(value) == 1),
-                        )
+                        if isinstance(must_value, str):
+                            score *= self.must_include(
+                                ref=must_value,
+                                pred=pred,
+                                tokenize=(len(value) == 1),
+                            )
+                        else:
+                            for value in must_value:
+                                include = self.must_include(
+                                    ref=must_value,
+                                    pred=pred,
+                                    tokenize=(len(value) == 1),
+                                )
+                                if include:
+                                    break
+                            else:
+                                score = 0
                 case "fuzzy_match":
                     intent = configs["intent"]
                     if value == "N/A":

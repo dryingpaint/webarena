@@ -9,6 +9,8 @@ import subprocess
 import tempfile
 import time
 from pathlib import Path
+import csv
+import datetime
 
 from protos.altera_agents import observations_pb2, actions_pb2
 import openai
@@ -281,6 +283,8 @@ def test(
 
             logger.info(f"[Config file]: {config_file}")
             logger.info(f"[Intent]: {intent}")
+            results[config_file]['intent'] = intent
+            none_actions = ''
 
             agent.reset(config_file)
             trajectory: Trajectory = []
@@ -303,6 +307,8 @@ def test(
                         action = agent.next_action(
                             trajectory, intent, meta_data=meta_data
                         )
+                        if action['action_type'] == ActionTypes.NONE:
+                            none_actions += action['raw_prediction']
                     except ValueError as e:
                         # get the error message
                         action = create_stop_action(f"ERROR: {str(e)}")
@@ -345,6 +351,19 @@ def test(
             scores.append(score)
 
             elapsed = int(time.time()-start_task)
+
+            results[config_file]['none_actions'] = none_actions
+            results[config_file]['elapsed'] = f"{elapsed} s"
+            results[config_file]['answer'] = trajectory[-1]['answer'] if len(trajectory) > 0 and 'answer' in trajectory[-1] else "No answer"
+            results[config_file]['outcome'] = f"PASS" if score == 1 else "FAIL"
+            date = datetime.datetime.now()
+            results[config_file]['time'] = f'{date.month}/{date.day} {date.hour}:{date.minute}'
+            results['config_file'] = config_file
+
+            with open("results.csv", "a", newline="") as f:
+                w = csv.DictWriter(f, results[config_file].keys())
+                w.writerow(results[config_file])
+
             if score == 1:
                 logger.info(f"[Result] (PASS) {config_file} after {elapsed} s")
             else:

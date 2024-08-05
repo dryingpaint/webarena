@@ -3191,7 +3191,7 @@
           "South Bouquet Street",
           "North Oakland",
           "Pittsburgh",
-          "4.0km"
+          ["4.0km", "4.0 km", "4 km", "4km"]
         ]
       },
       "reference_url": "",
@@ -8352,7 +8352,7 @@
       "reference_answers": {
         "must_include": [
           "Acadia National Park",
-          "457km"
+          ["457km", "457 km"]
         ]
       },
       "reference_url": "",
@@ -11325,7 +11325,7 @@
         "string_match"
       ],
       "reference_answers": {
-        "exact_match": "1.7km"
+        "exact_match": ["1.7km", "1.7 km"]
       },
       "reference_url": "",
       "program_html": [],
@@ -11355,7 +11355,7 @@
         "string_match"
       ],
       "reference_answers": {
-        "exact_match": "2.2km"
+        "exact_match": ["2.2km", "2.2 km"]
       },
       "reference_url": "",
       "program_html": [],
@@ -11385,7 +11385,7 @@
         "string_match"
       ],
       "reference_answers": {
-        "exact_match": "1.2km"
+        "exact_match": ["1.2km", "1.2 km"]
       },
       "reference_url": "",
       "program_html": [],
@@ -11415,7 +11415,7 @@
         "string_match"
       ],
       "reference_answers": {
-        "exact_match": "1.4km"
+        "exact_match": ["1.4km", "1.4 km"]
       },
       "reference_url": "",
       "program_html": [],

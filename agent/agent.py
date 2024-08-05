@@ -196,7 +196,7 @@ class AlteraAgent(Agent):
         #     )
         response = raw_response.split(" ")
         out = response[0]
-        if out == 'type' or out == 'stop':
+        if out == 'stop' or out == 'type':
             return raw_response
         if len(response) > 1:
             for param in response[1:]:
@@ -350,3 +350,4 @@ def construct_agent(args: argparse.Namespace) -> Agent:
             f"agent type {args.agent_type} not implemented"
         )
     return agent
+

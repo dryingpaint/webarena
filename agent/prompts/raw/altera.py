@@ -27,7 +27,10 @@ URL Navigation Actions:
 
 Completion Action:
 `stop [answer]`: Issue this action when you believe the task is complete. If the objective is to find a text-based answer, provide the answer in the bracket. If you believe the task is impossible to complete, provide the answer as "N/A" in the bracket.
-""",
+
+In order to remove text from a textbox, press [meta+a] to select all, then press [backspace].
+
+You may only issue one action.""",
 	"examples": [
 		(
 			"""OBSERVATION:

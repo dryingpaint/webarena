@@ -1,0 +1,2248 @@
+[Config file]: config_files/331.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/329.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/797.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/48.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/438.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/354.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/228.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/126.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/321.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/438.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/331.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/512.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/126.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/48.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/354.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/797.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/329.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/228.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: /tmp/tmp4p54lfxh/756.json
+[Unhandled Error] KeyError('/tmp/tmp4p54lfxh/756.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4p54lfxh/756.json'
+[Config file]: /tmp/tmpdpfglivv/663.json
+[Unhandled Error] KeyError('/tmp/tmpdpfglivv/663.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdpfglivv/663.json'
+[Config file]: /tmp/tmp9cef38xt/105.json
+[Unhandled Error] KeyError('/tmp/tmp9cef38xt/105.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9cef38xt/105.json'
+[Config file]: /tmp/tmpte4o6e10/592.json
+[Unhandled Error] KeyError('/tmp/tmpte4o6e10/592.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpte4o6e10/592.json'
+[Config file]: /tmp/tmpkuy8or7r/800.json
+[Unhandled Error] KeyError('/tmp/tmpkuy8or7r/800.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkuy8or7r/800.json'
+[Config file]: /tmp/tmpne3e4oun/296.json
+[Unhandled Error] KeyError('/tmp/tmpne3e4oun/296.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpne3e4oun/296.json'
+[Config file]: /tmp/tmphwnvlrot/295.json
+[Unhandled Error] KeyError('/tmp/tmphwnvlrot/295.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmphwnvlrot/295.json'
+[Config file]: /tmp/tmpugrk75q5/45.json
+[Unhandled Error] KeyError('/tmp/tmpugrk75q5/45.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpugrk75q5/45.json'
+[Config file]: /tmp/tmp0__kxwh4/563.json
+[Unhandled Error] KeyError('/tmp/tmp0__kxwh4/563.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0__kxwh4/563.json'
+[Config file]: /tmp/tmp9unnshbj/561.json
+[Unhandled Error] KeyError('/tmp/tmp9unnshbj/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9unnshbj/561.json'
+[Config file]: /tmp/tmpw0jk2uqa/560.json
+[Unhandled Error] KeyError('/tmp/tmpw0jk2uqa/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpw0jk2uqa/560.json'
+[Config file]: /tmp/tmpf7wugfdo/561.json
+[Unhandled Error] KeyError('/tmp/tmpf7wugfdo/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpf7wugfdo/561.json'
+[Config file]: /tmp/tmptghmr4bq/560.json
+[Unhandled Error] KeyError('/tmp/tmptghmr4bq/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptghmr4bq/560.json'
+[Config file]: config_files/331.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/512.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/126.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/48.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/321.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/329.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/228.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/438.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/354.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 282, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: /tmp/tmpfa1s1wma/561.json
+[Unhandled Error] KeyError('/tmp/tmpfa1s1wma/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfa1s1wma/561.json'
+[Config file]: /tmp/tmp3ucjtsf_/560.json
+[Unhandled Error] KeyError('/tmp/tmp3ucjtsf_/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3ucjtsf_/560.json'
+[Config file]: /tmp/tmp7kypjj5h/560.json
+[Unhandled Error] KeyError('/tmp/tmp7kypjj5h/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp7kypjj5h/560.json'
+[Config file]: /tmp/tmpw3u3dsm5/561.json
+[Unhandled Error] KeyError('/tmp/tmpw3u3dsm5/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpw3u3dsm5/561.json'
+[Config file]: /tmp/tmpp878ycx_/560.json
+[Unhandled Error] KeyError('/tmp/tmpp878ycx_/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpp878ycx_/560.json'
+[Config file]: /tmp/tmpupqxkqiv/561.json
+[Unhandled Error] KeyError('/tmp/tmpupqxkqiv/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 290, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpupqxkqiv/561.json'
+[Config file]: /tmp/tmptxk77c88/556.json
+[Unhandled Error] KeyError('/tmp/tmptxk77c88/556.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptxk77c88/556.json'
+[Config file]: /tmp/tmp5z7_77zk/557.json
+[Unhandled Error] KeyError('/tmp/tmp5z7_77zk/557.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5z7_77zk/557.json'
+[Config file]: /tmp/tmpvq8abied/561.json
+[Unhandled Error] KeyError('/tmp/tmpvq8abied/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpvq8abied/561.json'
+[Config file]: /tmp/tmpb46_v_an/559.json
+[Unhandled Error] KeyError('/tmp/tmpb46_v_an/559.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpb46_v_an/559.json'
+[Config file]: config_files/268.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8368)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 307, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7f4491387250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: config_files/265.json
+[Unhandled Error] BeartypeCallHintParamViolation("@beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 344, in test
+    score = evaluator(
+  File "<@beartype(evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x7f3bb1318820>", line 112, in __call__
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 374, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 165, in __call__
+    include = self.must_include(
+  File "<@beartype(evaluation_harness.evaluators.StringEvaluator.must_include) at 0x7f3bb12f7e20>", line 22, in must_include
+beartype.roar.BeartypeCallHintParamViolation: @beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.
+[Config file]: /tmp/tmpvveczv_c/556.json
+[Unhandled Error] KeyError('/tmp/tmpvveczv_c/556.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpvveczv_c/556.json'
+[Config file]: /tmp/tmpi54tcgfu/559.json
+[Unhandled Error] KeyError('/tmp/tmpi54tcgfu/559.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpi54tcgfu/559.json'
+[Config file]: /tmp/tmp553u7nj7/557.json
+[Unhandled Error] KeyError('/tmp/tmp553u7nj7/557.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp553u7nj7/557.json'
+[Config file]: /tmp/tmp89lqkbb9/560.json
+[Unhandled Error] KeyError('/tmp/tmp89lqkbb9/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp89lqkbb9/560.json'
+[Config file]: /tmp/tmpwn_cr5yn/561.json
+[Unhandled Error] KeyError('/tmp/tmpwn_cr5yn/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwn_cr5yn/561.json'
+[Config file]: /tmp/tmp8pet5ekj/558.json
+[Unhandled Error] KeyError('/tmp/tmp8pet5ekj/558.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8pet5ekj/558.json'
+[Config file]: config_files/97.json
+[Unhandled Error] BeartypeCallHintParamViolation("@beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['914km', '914 km'] violates type hint <class 'str'>, as list ['914km', '914 km'] not instance of str.")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 344, in test
+    score = evaluator(
+  File "<@beartype(evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x7fd2ed058820>", line 112, in __call__
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 374, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 165, in __call__
+    include = self.must_include(
+  File "<@beartype(evaluation_harness.evaluators.StringEvaluator.must_include) at 0x7fd2ed03be20>", line 22, in must_include
+beartype.roar.BeartypeCallHintParamViolation: @beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['914km', '914 km'] violates type hint <class 'str'>, as list ['914km', '914 km'] not instance of str.
+[Config file]: /tmp/tmpn50tz6e0/558.json
+[Unhandled Error] KeyError('/tmp/tmpn50tz6e0/558.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpn50tz6e0/558.json'
+[Config file]: /tmp/tmpbgctcpxu/557.json
+[Unhandled Error] KeyError('/tmp/tmpbgctcpxu/557.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbgctcpxu/557.json'
+[Config file]: /tmp/tmpcv_zc36p/560.json
+[Unhandled Error] KeyError('/tmp/tmpcv_zc36p/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpcv_zc36p/560.json'
+[Config file]: /tmp/tmp4ia9ke5b/561.json
+[Unhandled Error] KeyError('/tmp/tmp4ia9ke5b/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4ia9ke5b/561.json'
+[Config file]: /tmp/tmp8te2heix/558.json
+[Unhandled Error] KeyError('/tmp/tmp8te2heix/558.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8te2heix/558.json'
+[Config file]: /tmp/tmpry0u4d0j/560.json
+[Unhandled Error] KeyError('/tmp/tmpry0u4d0j/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpry0u4d0j/560.json'
+[Config file]: /tmp/tmpt6v657dr/559.json
+[Unhandled Error] KeyError('/tmp/tmpt6v657dr/559.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpt6v657dr/559.json'
+[Config file]: /tmp/tmpq6zo_m6z/561.json
+[Unhandled Error] KeyError('/tmp/tmpq6zo_m6z/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpq6zo_m6z/561.json'
+[Config file]: /tmp/tmpi8w9u2n4/557.json
+[Unhandled Error] KeyError('/tmp/tmpi8w9u2n4/557.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpi8w9u2n4/557.json'
+[Config file]: /tmp/tmp6b2v58x3/556.json
+[Unhandled Error] KeyError('/tmp/tmp6b2v58x3/556.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp6b2v58x3/556.json'
+[Config file]: config_files/265.json
+[Unhandled Error] BeartypeCallHintParamViolation("@beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 344, in test
+    score = evaluator(
+  File "<@beartype(evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x7fb259b64820>", line 112, in __call__
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 374, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 165, in __call__
+    include = self.must_include(
+  File "<@beartype(evaluation_harness.evaluators.StringEvaluator.must_include) at 0x7fb259b47e20>", line 22, in must_include
+beartype.roar.BeartypeCallHintParamViolation: @beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.
+[Config file]: /tmp/tmpuknsuqxa/590.json
+[Unhandled Error] KeyError('/tmp/tmpuknsuqxa/590.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpuknsuqxa/590.json'
+[Config file]: /tmp/tmp_8_1zung/417.json
+[Unhandled Error] KeyError('/tmp/tmp_8_1zung/417.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp_8_1zung/417.json'
+[Config file]: /tmp/tmply9wc66a/392.json
+[Unhandled Error] KeyError('/tmp/tmply9wc66a/392.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmply9wc66a/392.json'
+[Config file]: /tmp/tmpoc40y8bt/562.json
+[Unhandled Error] KeyError('/tmp/tmpoc40y8bt/562.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpoc40y8bt/562.json'
+[Config file]: /tmp/tmpls104msw/46.json
+[Unhandled Error] KeyError('/tmp/tmpls104msw/46.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpls104msw/46.json'
+[Config file]: /tmp/tmpkmfhx4ud/316.json
+[Unhandled Error] KeyError('/tmp/tmpkmfhx4ud/316.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkmfhx4ud/316.json'
+[Config file]: /tmp/tmpejhbjsq5/135.json
+[Unhandled Error] KeyError('/tmp/tmpejhbjsq5/135.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpejhbjsq5/135.json'
+[Config file]: /tmp/tmpf9x0u3sd/561.json
+[Unhandled Error] KeyError('/tmp/tmpf9x0u3sd/561.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpf9x0u3sd/561.json'
+[Config file]: /tmp/tmpp7ebs3qs/168.json
+[Unhandled Error] KeyError('/tmp/tmpp7ebs3qs/168.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpp7ebs3qs/168.json'
+[Config file]: /tmp/tmp6ioslwqk/591.json
+[Unhandled Error] KeyError('/tmp/tmp6ioslwqk/591.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp6ioslwqk/591.json'
+[Config file]: /tmp/tmpymt0f58u/205.json
+[Unhandled Error] KeyError('/tmp/tmpymt0f58u/205.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpymt0f58u/205.json'
+[Config file]: /tmp/tmptalv3wow/525.json
+[Unhandled Error] KeyError('/tmp/tmptalv3wow/525.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptalv3wow/525.json'
+[Config file]: /tmp/tmpebaay73l/787.json
+[Unhandled Error] KeyError('/tmp/tmpebaay73l/787.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpebaay73l/787.json'
+[Config file]: /tmp/tmpcuglatcj/478.json
+[Unhandled Error] KeyError('/tmp/tmpcuglatcj/478.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpcuglatcj/478.json'
+[Config file]: /tmp/tmpubx169p4/534.json
+[Unhandled Error] KeyError('/tmp/tmpubx169p4/534.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpubx169p4/534.json'
+[Config file]: /tmp/tmpa77r2s0o/411.json
+[Unhandled Error] KeyError('/tmp/tmpa77r2s0o/411.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpa77r2s0o/411.json'
+[Config file]: /tmp/tmpy_nmp2rn/568.json
+[Unhandled Error] KeyError('/tmp/tmpy_nmp2rn/568.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy_nmp2rn/568.json'
+[Config file]: /tmp/tmp1chf9lxo/450.json
+[Unhandled Error] KeyError('/tmp/tmp1chf9lxo/450.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp1chf9lxo/450.json'
+[Config file]: /tmp/tmpkxr31w9l/297.json
+[Unhandled Error] KeyError('/tmp/tmpkxr31w9l/297.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkxr31w9l/297.json'
+[Config file]: /tmp/tmpbrc5t11r/800.json
+[Unhandled Error] KeyError('/tmp/tmpbrc5t11r/800.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbrc5t11r/800.json'
+[Config file]: /tmp/tmp1hwpg7v5/44.json
+[Unhandled Error] KeyError('/tmp/tmp1hwpg7v5/44.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp1hwpg7v5/44.json'
+[Config file]: /tmp/tmpdwre370c/136.json
+[Unhandled Error] KeyError('/tmp/tmpdwre370c/136.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdwre370c/136.json'
+[Config file]: /tmp/tmpnbg3eb4w/176.json
+[Unhandled Error] KeyError('/tmp/tmpnbg3eb4w/176.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpnbg3eb4w/176.json'
+[Config file]: /tmp/tmp38s1_cgp/789.json
+[Unhandled Error] KeyError('/tmp/tmp38s1_cgp/789.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp38s1_cgp/789.json'
+[Config file]: /tmp/tmplj02fkjj/526.json
+[Unhandled Error] KeyError('/tmp/tmplj02fkjj/526.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmplj02fkjj/526.json'
+[Config file]: /tmp/tmpy9bdmdc9/174.json
+[Unhandled Error] KeyError('/tmp/tmpy9bdmdc9/174.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy9bdmdc9/174.json'
+[Config file]: /tmp/tmp8v87sx6k/563.json
+[Unhandled Error] KeyError('/tmp/tmp8v87sx6k/563.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8v87sx6k/563.json'
+[Config file]: /tmp/tmpir7cp8jh/179.json
+[Unhandled Error] KeyError('/tmp/tmpir7cp8jh/179.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpir7cp8jh/179.json'
+[Config file]: /tmp/tmp05u7c8tz/663.json
+[Unhandled Error] KeyError('/tmp/tmp05u7c8tz/663.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp05u7c8tz/663.json'
+[Config file]: /tmp/tmp9n0shciw/414.json
+[Unhandled Error] KeyError('/tmp/tmp9n0shciw/414.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9n0shciw/414.json'
+[Config file]: /tmp/tmp7gj9v897/315.json
+[Unhandled Error] KeyError('/tmp/tmp7gj9v897/315.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp7gj9v897/315.json'
+[Config file]: /tmp/tmppcuw7rg_/182.json
+[Unhandled Error] KeyError('/tmp/tmppcuw7rg_/182.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmppcuw7rg_/182.json'
+[Config file]: /tmp/tmp4cc51t1y/786.json
+[Unhandled Error] KeyError('/tmp/tmp4cc51t1y/786.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4cc51t1y/786.json'
+[Config file]: /tmp/tmp4gcq06r2/175.json
+[Unhandled Error] KeyError('/tmp/tmp4gcq06r2/175.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4gcq06r2/175.json'
+[Config file]: /tmp/tmpt3b00yvm/479.json
+[Unhandled Error] KeyError('/tmp/tmpt3b00yvm/479.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpt3b00yvm/479.json'
+[Config file]: /tmp/tmpy9zqreld/527.json
+[Unhandled Error] KeyError('/tmp/tmpy9zqreld/527.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy9zqreld/527.json'
+[Config file]: /tmp/tmp0dmjngb5/415.json
+[Unhandled Error] KeyError('/tmp/tmp0dmjngb5/415.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0dmjngb5/415.json'
+[Config file]: /tmp/tmpd89m2rgs/748.json
+[Unhandled Error] KeyError('/tmp/tmpd89m2rgs/748.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpd89m2rgs/748.json'
+[Config file]: /tmp/tmpwi8lbiuy/683.json
+[Unhandled Error] KeyError('/tmp/tmpwi8lbiuy/683.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwi8lbiuy/683.json'
+[Config file]: /tmp/tmph5m935q5/578.json
+[Unhandled Error] KeyError('/tmp/tmph5m935q5/578.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmph5m935q5/578.json'
+[Config file]: /tmp/tmpun2__jpb/594.json
+[Unhandled Error] KeyError('/tmp/tmpun2__jpb/594.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpun2__jpb/594.json'
+[Config file]: /tmp/tmpjtx07ody/422.json
+[Unhandled Error] KeyError('/tmp/tmpjtx07ody/422.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpjtx07ody/422.json'
+[Config file]: /tmp/tmpa9xpnlfl/536.json
+[Unhandled Error] KeyError('/tmp/tmpa9xpnlfl/536.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpa9xpnlfl/536.json'
+[Config file]: /tmp/tmp9xlky9qi/742.json
+[Unhandled Error] KeyError('/tmp/tmp9xlky9qi/742.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9xlky9qi/742.json'
+[Config file]: /tmp/tmp0rpj5p9_/756.json
+[Unhandled Error] KeyError('/tmp/tmp0rpj5p9_/756.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0rpj5p9_/756.json'
+[Config file]: /tmp/tmpmfzpj15m/533.json
+[Unhandled Error] KeyError('/tmp/tmpmfzpj15m/533.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpmfzpj15m/533.json'
+[Config file]: /tmp/tmpj6n18duj/314.json
+[Unhandled Error] KeyError('/tmp/tmpj6n18duj/314.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpj6n18duj/314.json'
+[Config file]: /tmp/tmp892ai8vf/559.json
+[Unhandled Error] KeyError('/tmp/tmp892ai8vf/559.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp892ai8vf/559.json'
+[Config file]: /tmp/tmpphuma0hq/523.json
+[Unhandled Error] KeyError('/tmp/tmpphuma0hq/523.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpphuma0hq/523.json'
+[Config file]: /tmp/tmph2r6ctf4/750.json
+[Unhandled Error] KeyError('/tmp/tmph2r6ctf4/750.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmph2r6ctf4/750.json'
+[Config file]: /tmp/tmpuclzu7yv/451.json
+[Unhandled Error] KeyError('/tmp/tmpuclzu7yv/451.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpuclzu7yv/451.json'
+[Config file]: /tmp/tmp35d0rtqa/668.json
+[Unhandled Error] KeyError('/tmp/tmp35d0rtqa/668.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp35d0rtqa/668.json'
+[Config file]: /tmp/tmpl2cd8qa2/311.json
+[Unhandled Error] KeyError('/tmp/tmpl2cd8qa2/311.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpl2cd8qa2/311.json'
+[Config file]: /tmp/tmp2am1boiq/755.json
+[Unhandled Error] KeyError('/tmp/tmp2am1boiq/755.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp2am1boiq/755.json'
+[Config file]: /tmp/tmpn_bro0g9/341.json
+[Unhandled Error] KeyError('/tmp/tmpn_bro0g9/341.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpn_bro0g9/341.json'
+[Config file]: /tmp/tmpik63m295/318.json
+[Unhandled Error] KeyError('/tmp/tmpik63m295/318.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpik63m295/318.json'
+[Config file]: /tmp/tmpeiwe191_/398.json
+[Unhandled Error] KeyError('/tmp/tmpeiwe191_/398.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpeiwe191_/398.json'
+[Config file]: /tmp/tmpkpx08iij/801.json
+[Unhandled Error] KeyError('/tmp/tmpkpx08iij/801.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkpx08iij/801.json'
+[Config file]: /tmp/tmp49q127bh/173.json
+[Unhandled Error] KeyError('/tmp/tmp49q127bh/173.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp49q127bh/173.json'
+[Config file]: /tmp/tmp0bnw10rh/662.json
+[Unhandled Error] KeyError('/tmp/tmp0bnw10rh/662.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0bnw10rh/662.json'
+[Config file]: /tmp/tmph4i_ni7w/441.json
+[Unhandled Error] KeyError('/tmp/tmph4i_ni7w/441.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmph4i_ni7w/441.json'
+[Config file]: /tmp/tmppqam4bca/132.json
+[Unhandled Error] KeyError('/tmp/tmppqam4bca/132.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmppqam4bca/132.json'
+[Config file]: /tmp/tmp09vl_f_c/807.json
+[Unhandled Error] KeyError('/tmp/tmp09vl_f_c/807.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp09vl_f_c/807.json'
+[Config file]: /tmp/tmpwyi9dmdz/309.json
+[Unhandled Error] KeyError('/tmp/tmpwyi9dmdz/309.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwyi9dmdz/309.json'
+[Config file]: /tmp/tmpzn60ga2b/312.json
+[Unhandled Error] KeyError('/tmp/tmpzn60ga2b/312.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpzn60ga2b/312.json'
+[Config file]: /tmp/tmpkc2o3h68/665.json
+[Unhandled Error] KeyError('/tmp/tmpkc2o3h68/665.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkc2o3h68/665.json'
+[Config file]: /tmp/tmp4enwrxdi/393.json
+[Unhandled Error] KeyError('/tmp/tmp4enwrxdi/393.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4enwrxdi/393.json'
+[Config file]: /tmp/tmpl36v6_09/307.json
+[Unhandled Error] KeyError('/tmp/tmpl36v6_09/307.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpl36v6_09/307.json'
+[Config file]: /tmp/tmp35lfrsdh/452.json
+[Unhandled Error] KeyError('/tmp/tmp35lfrsdh/452.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp35lfrsdh/452.json'
+[Config file]: /tmp/tmpb4sthtkz/169.json
+[Unhandled Error] KeyError('/tmp/tmpb4sthtkz/169.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpb4sthtkz/169.json'
+[Config file]: /tmp/tmp3p3whaf3/557.json
+[Unhandled Error] KeyError('/tmp/tmp3p3whaf3/557.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3p3whaf3/557.json'
+[Config file]: /tmp/tmpwikv672w/102.json
+[Unhandled Error] KeyError('/tmp/tmpwikv672w/102.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwikv672w/102.json'
+[Config file]: /tmp/tmp8yf5mbe6/570.json
+[Unhandled Error] KeyError('/tmp/tmp8yf5mbe6/570.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8yf5mbe6/570.json'
+[Config file]: /tmp/tmph5tlx6z8/449.json
+[Unhandled Error] KeyError('/tmp/tmph5tlx6z8/449.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmph5tlx6z8/449.json'
+[Config file]: /tmp/tmptf9cnq4g/395.json
+[Unhandled Error] KeyError('/tmp/tmptf9cnq4g/395.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptf9cnq4g/395.json'
+[Config file]: /tmp/tmp0e0hewr2/156.json
+[Unhandled Error] KeyError('/tmp/tmp0e0hewr2/156.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0e0hewr2/156.json'
+[Config file]: /tmp/tmpce6lpfnx/556.json
+[Unhandled Error] KeyError('/tmp/tmpce6lpfnx/556.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpce6lpfnx/556.json'
+[Config file]: /tmp/tmp6165csi7/788.json
+[Unhandled Error] KeyError('/tmp/tmp6165csi7/788.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp6165csi7/788.json'
+[Config file]: /tmp/tmpx4hxhnay/444.json
+[Unhandled Error] KeyError('/tmp/tmpx4hxhnay/444.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpx4hxhnay/444.json'
+[Config file]: /tmp/tmppoe947co/753.json
+[Unhandled Error] KeyError('/tmp/tmppoe947co/753.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmppoe947co/753.json'
+[Config file]: /tmp/tmp8tkrfk7t/522.json
+[Unhandled Error] KeyError('/tmp/tmp8tkrfk7t/522.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8tkrfk7t/522.json'
+[Config file]: /tmp/tmp24af_24y/104.json
+[Unhandled Error] KeyError('/tmp/tmp24af_24y/104.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp24af_24y/104.json'
+[Config file]: /tmp/tmp2g97zos5/106.json
+[Unhandled Error] KeyError('/tmp/tmp2g97zos5/106.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp2g97zos5/106.json'
+[Config file]: /tmp/tmp78r_yhmh/666.json
+[Unhandled Error] KeyError('/tmp/tmp78r_yhmh/666.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp78r_yhmh/666.json'
+[Config file]: /tmp/tmpxsngukui/180.json
+[Unhandled Error] KeyError('/tmp/tmpxsngukui/180.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpxsngukui/180.json'
+[Config file]: /tmp/tmpcch7j1e2/390.json
+[Unhandled Error] KeyError('/tmp/tmpcch7j1e2/390.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpcch7j1e2/390.json'
+[Config file]: /tmp/tmpfftiw54p/664.json
+[Unhandled Error] KeyError('/tmp/tmpfftiw54p/664.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfftiw54p/664.json'
+[Config file]: /tmp/tmp8thik1yq/754.json
+[Unhandled Error] KeyError('/tmp/tmp8thik1yq/754.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8thik1yq/754.json'
+[Config file]: /tmp/tmpbyh4i55r/317.json
+[Unhandled Error] KeyError('/tmp/tmpbyh4i55r/317.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbyh4i55r/317.json'
+[Config file]: /tmp/tmpr_ghfkem/412.json
+[Unhandled Error] KeyError('/tmp/tmpr_ghfkem/412.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpr_ghfkem/412.json'
+[Config file]: /tmp/tmpg2ruwpdx/349.json
+[Unhandled Error] KeyError('/tmp/tmpg2ruwpdx/349.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpg2ruwpdx/349.json'
+[Config file]: /tmp/tmptflo8o9a/535.json
+[Unhandled Error] KeyError('/tmp/tmptflo8o9a/535.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptflo8o9a/535.json'
+[Config file]: /tmp/tmplqm9bu2o/340.json
+[Unhandled Error] KeyError('/tmp/tmplqm9bu2o/340.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmplqm9bu2o/340.json'
+[Config file]: /tmp/tmp5ro5u1ux/480.json
+[Unhandled Error] KeyError('/tmp/tmp5ro5u1ux/480.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5ro5u1ux/480.json'
+[Config file]: /tmp/tmpahrkeuna/105.json
+[Unhandled Error] KeyError('/tmp/tmpahrkeuna/105.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpahrkeuna/105.json'
+[Config file]: /tmp/tmp80l_nv8c/305.json
+[Unhandled Error] KeyError('/tmp/tmp80l_nv8c/305.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp80l_nv8c/305.json'
+[Config file]: /tmp/tmpjvjagrp3/811.json
+[Unhandled Error] KeyError('/tmp/tmpjvjagrp3/811.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpjvjagrp3/811.json'
+[Config file]: /tmp/tmpfzxq2nay/805.json
+[Unhandled Error] KeyError('/tmp/tmpfzxq2nay/805.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfzxq2nay/805.json'
+[Config file]: /tmp/tmpnznkzn65/134.json
+[Unhandled Error] KeyError('/tmp/tmpnznkzn65/134.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpnznkzn65/134.json'
+[Config file]: /tmp/tmpg67tm6md/785.json
+[Unhandled Error] KeyError('/tmp/tmpg67tm6md/785.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpg67tm6md/785.json'
+[Config file]: /tmp/tmpj1unw9wy/420.json
+[Unhandled Error] KeyError('/tmp/tmpj1unw9wy/420.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpj1unw9wy/420.json'
+[Config file]: /tmp/tmp35by82_d/569.json
+[Unhandled Error] KeyError('/tmp/tmp35by82_d/569.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp35by82_d/569.json'
+[Config file]: /tmp/tmp5iv1zl32/446.json
+[Unhandled Error] KeyError('/tmp/tmp5iv1zl32/446.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5iv1zl32/446.json'
+[Config file]: /tmp/tmpfzouzedy/566.json
+[Unhandled Error] KeyError('/tmp/tmpfzouzedy/566.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfzouzedy/566.json'
+[Config file]: /tmp/tmpw5735psd/803.json
+[Unhandled Error] KeyError('/tmp/tmpw5735psd/803.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpw5735psd/803.json'
+[Config file]: /tmp/tmpcmfb8fj6/419.json
+[Unhandled Error] KeyError('/tmp/tmpcmfb8fj6/419.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpcmfb8fj6/419.json'
+[Config file]: /tmp/tmpydlbdiw7/207.json
+[Unhandled Error] KeyError('/tmp/tmpydlbdiw7/207.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpydlbdiw7/207.json'
+[Config file]: /tmp/tmpbfgueow3/178.json
+[Unhandled Error] KeyError('/tmp/tmpbfgueow3/178.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbfgueow3/178.json'
+[Config file]: /tmp/tmpouf3_fuj/749.json
+[Unhandled Error] KeyError('/tmp/tmpouf3_fuj/749.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpouf3_fuj/749.json'
+[Config file]: /tmp/tmp5p6cdtjp/481.json
+[Unhandled Error] KeyError('/tmp/tmp5p6cdtjp/481.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5p6cdtjp/481.json'
+[Config file]: /tmp/tmp_fyxt0mp/802.json
+[Unhandled Error] KeyError('/tmp/tmp_fyxt0mp/802.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp_fyxt0mp/802.json'
+[Config file]: /tmp/tmp66i0ieda/293.json
+[Unhandled Error] KeyError('/tmp/tmp66i0ieda/293.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp66i0ieda/293.json'
+[Config file]: /tmp/tmp28dv3z36/593.json
+[Unhandled Error] KeyError('/tmp/tmp28dv3z36/593.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp28dv3z36/593.json'
+[Config file]: /tmp/tmpkbvhxpsd/482.json
+[Unhandled Error] KeyError('/tmp/tmpkbvhxpsd/482.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkbvhxpsd/482.json'
+[Config file]: /tmp/tmpbfolovq0/172.json
+[Unhandled Error] KeyError('/tmp/tmpbfolovq0/172.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbfolovq0/172.json'
+[Config file]: /tmp/tmpjwydfdq6/743.json
+[Unhandled Error] KeyError('/tmp/tmpjwydfdq6/743.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpjwydfdq6/743.json'
+[Config file]: /tmp/tmp3v5x40d9/524.json
+[Unhandled Error] KeyError('/tmp/tmp3v5x40d9/524.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3v5x40d9/524.json'
+[Config file]: /tmp/tmpfc9zxeob/397.json
+[Unhandled Error] KeyError('/tmp/tmpfc9zxeob/397.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfc9zxeob/397.json'
+[Config file]: /tmp/tmp0natk5ke/784.json
+[Unhandled Error] KeyError('/tmp/tmp0natk5ke/784.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0natk5ke/784.json'
+[Config file]: /tmp/tmpdj4vtwzp/684.json
+[Unhandled Error] KeyError('/tmp/tmpdj4vtwzp/684.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdj4vtwzp/684.json'
+[Config file]: /tmp/tmpwv_esuny/686.json
+[Unhandled Error] KeyError('/tmp/tmpwv_esuny/686.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwv_esuny/686.json'
+[Config file]: /tmp/tmpbg1a88b5/804.json
+[Unhandled Error] KeyError('/tmp/tmpbg1a88b5/804.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbg1a88b5/804.json'
+[Config file]: /tmp/tmpmaqt3iiw/751.json
+[Unhandled Error] KeyError('/tmp/tmpmaqt3iiw/751.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpmaqt3iiw/751.json'
+[Config file]: /tmp/tmphmtok7nn/133.json
+[Unhandled Error] KeyError('/tmp/tmphmtok7nn/133.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmphmtok7nn/133.json'
+[Config file]: /tmp/tmpohrbm41j/799.json
+[Unhandled Error] KeyError('/tmp/tmpohrbm41j/799.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpohrbm41j/799.json'
+[Config file]: /tmp/tmpe36uf3bq/476.json
+[Unhandled Error] KeyError('/tmp/tmpe36uf3bq/476.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpe36uf3bq/476.json'
+[Config file]: /tmp/tmp8cmz8mfy/391.json
+[Unhandled Error] KeyError('/tmp/tmp8cmz8mfy/391.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8cmz8mfy/391.json'
+[Config file]: /tmp/tmpf9ku9l5g/170.json
+[Unhandled Error] KeyError('/tmp/tmpf9ku9l5g/170.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpf9ku9l5g/170.json'
+[Config file]: /tmp/tmp5jmar8l7/484.json
+[Unhandled Error] KeyError('/tmp/tmp5jmar8l7/484.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5jmar8l7/484.json'
+[Config file]: /tmp/tmplfic16jl/177.json
+[Unhandled Error] KeyError('/tmp/tmplfic16jl/177.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmplfic16jl/177.json'
+[Config file]: /tmp/tmp58wklp3w/339.json
+[Unhandled Error] KeyError('/tmp/tmp58wklp3w/339.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp58wklp3w/339.json'
+[Config file]: /tmp/tmptktovesx/736.json
+[Unhandled Error] KeyError('/tmp/tmptktovesx/736.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptktovesx/736.json'
+[Config file]: /tmp/tmpngosoyf7/747.json
+[Unhandled Error] KeyError('/tmp/tmpngosoyf7/747.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpngosoyf7/747.json'
+[Config file]: /tmp/tmpr14snifl/564.json
+[Unhandled Error] KeyError('/tmp/tmpr14snifl/564.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpr14snifl/564.json'
+[Config file]: /tmp/tmpc48va7pe/306.json
+[Unhandled Error] KeyError('/tmp/tmpc48va7pe/306.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpc48va7pe/306.json'
+[Config file]: /tmp/tmpdf_abo1l/681.json
+[Unhandled Error] KeyError('/tmp/tmpdf_abo1l/681.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdf_abo1l/681.json'
+[Config file]: /tmp/tmpzgscd5tl/685.json
+[Unhandled Error] KeyError('/tmp/tmpzgscd5tl/685.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpzgscd5tl/685.json'
+[Config file]: /tmp/tmpyihkn4jd/682.json
+[Unhandled Error] KeyError('/tmp/tmpyihkn4jd/682.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpyihkn4jd/682.json'
+[Config file]: /tmp/tmp8qkgb9w7/687.json
+[Unhandled Error] KeyError('/tmp/tmp8qkgb9w7/687.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8qkgb9w7/687.json'
+[Config file]: /tmp/tmpbn9_2ssl/554.json
+[Unhandled Error] KeyError('/tmp/tmpbn9_2ssl/554.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbn9_2ssl/554.json'
+[Config file]: /tmp/tmpw01yebuy/809.json
+[Unhandled Error] KeyError('/tmp/tmpw01yebuy/809.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpw01yebuy/809.json'
+[Config file]: /tmp/tmp1lfwgtbn/447.json
+[Unhandled Error] KeyError('/tmp/tmp1lfwgtbn/447.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp1lfwgtbn/447.json'
+[Config file]: /tmp/tmphxdh_icr/659.json
+[Unhandled Error] KeyError('/tmp/tmphxdh_icr/659.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmphxdh_icr/659.json'
+[Config file]: /tmp/tmp0h39yfdp/413.json
+[Unhandled Error] KeyError('/tmp/tmp0h39yfdp/413.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0h39yfdp/413.json'
+[Config file]: /tmp/tmppfi28b91/485.json
+[Unhandled Error] KeyError('/tmp/tmppfi28b91/485.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmppfi28b91/485.json'
+[Config file]: /tmp/tmpu6oc_pz5/171.json
+[Unhandled Error] KeyError('/tmp/tmpu6oc_pz5/171.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpu6oc_pz5/171.json'
+[Config file]: /tmp/tmpe0ks053o/259.json
+[Unhandled Error] KeyError('/tmp/tmpe0ks053o/259.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpe0ks053o/259.json'
+[Config file]: /tmp/tmp4o2ap2ft/660.json
+[Unhandled Error] KeyError('/tmp/tmp4o2ap2ft/660.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4o2ap2ft/660.json'
+[Config file]: /tmp/tmp3u_j1928/310.json
+[Unhandled Error] KeyError('/tmp/tmp3u_j1928/310.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3u_j1928/310.json'
+[Config file]: /tmp/tmpsm3ze8ou/45.json
+[Unhandled Error] KeyError('/tmp/tmpsm3ze8ou/45.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpsm3ze8ou/45.json'
+[Config file]: /tmp/tmpy6_96qrj/448.json
+[Unhandled Error] KeyError('/tmp/tmpy6_96qrj/448.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy6_96qrj/448.json'
+[Config file]: /tmp/tmpqy3m6p1m/343.json
+[Unhandled Error] KeyError('/tmp/tmpqy3m6p1m/343.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpqy3m6p1m/343.json'
+[Config file]: /tmp/tmptmpwlt0s/308.json
+[Unhandled Error] KeyError('/tmp/tmptmpwlt0s/308.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmptmpwlt0s/308.json'
+[Config file]: /tmp/tmpyzvagdnq/475.json
+[Unhandled Error] KeyError('/tmp/tmpyzvagdnq/475.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpyzvagdnq/475.json'
+[Config file]: /tmp/tmpaoph5_n0/579.json
+[Unhandled Error] KeyError('/tmp/tmpaoph5_n0/579.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpaoph5_n0/579.json'
+[Config file]: /tmp/tmpiz2y2fii/103.json
+[Unhandled Error] KeyError('/tmp/tmpiz2y2fii/103.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpiz2y2fii/103.json'
+[Config file]: /tmp/tmpskne5lqb/258.json
+[Unhandled Error] KeyError('/tmp/tmpskne5lqb/258.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpskne5lqb/258.json'
+[Config file]: /tmp/tmp5jb9yot2/294.json
+[Unhandled Error] KeyError('/tmp/tmp5jb9yot2/294.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5jb9yot2/294.json'
+[Config file]: /tmp/tmpu1rjrjo9/350.json
+[Unhandled Error] KeyError('/tmp/tmpu1rjrjo9/350.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpu1rjrjo9/350.json'
+[Config file]: /tmp/tmp3qsuxg2t/552.json
+[Unhandled Error] KeyError('/tmp/tmp3qsuxg2t/552.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3qsuxg2t/552.json'
+[Config file]: /tmp/tmpuloli9wq/181.json
+[Unhandled Error] KeyError('/tmp/tmpuloli9wq/181.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpuloli9wq/181.json'
+[Config file]: /tmp/tmpkhc0_9xr/744.json
+[Unhandled Error] KeyError('/tmp/tmpkhc0_9xr/744.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpkhc0_9xr/744.json'
+[Config file]: /tmp/tmp8kd43n_1/421.json
+[Unhandled Error] KeyError('/tmp/tmp8kd43n_1/421.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8kd43n_1/421.json'
+[Config file]: /tmp/tmpe6pqpzc_/752.json
+[Unhandled Error] KeyError('/tmp/tmpe6pqpzc_/752.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpe6pqpzc_/752.json'
+[Config file]: /tmp/tmpg12p2su8/791.json
+[Unhandled Error] KeyError('/tmp/tmpg12p2su8/791.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpg12p2su8/791.json'
+[Config file]: /tmp/tmp2fwnr6rd/303.json
+[Unhandled Error] KeyError('/tmp/tmp2fwnr6rd/303.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp2fwnr6rd/303.json'
+[Config file]: /tmp/tmpgg8m4hv9/558.json
+[Unhandled Error] KeyError('/tmp/tmpgg8m4hv9/558.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpgg8m4hv9/558.json'
+[Config file]: /tmp/tmp0dp6u6ff/746.json
+[Unhandled Error] KeyError('/tmp/tmp0dp6u6ff/746.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0dp6u6ff/746.json'
+[Config file]: /tmp/tmpuhsgynuf/806.json
+[Unhandled Error] KeyError('/tmp/tmpuhsgynuf/806.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpuhsgynuf/806.json'
+[Config file]: /tmp/tmp0v1n9ons/416.json
+[Unhandled Error] KeyError('/tmp/tmp0v1n9ons/416.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0v1n9ons/416.json'
+[Config file]: /tmp/tmp13v01z9j/396.json
+[Unhandled Error] KeyError('/tmp/tmp13v01z9j/396.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp13v01z9j/396.json'
+[Config file]: /tmp/tmpxcl8e40e/560.json
+[Unhandled Error] KeyError('/tmp/tmpxcl8e40e/560.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpxcl8e40e/560.json'
+[Config file]: /tmp/tmp_e2ghv36/555.json
+[Unhandled Error] KeyError('/tmp/tmp_e2ghv36/555.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp_e2ghv36/555.json'
+[Config file]: /tmp/tmpk1fs2lss/565.json
+[Unhandled Error] KeyError('/tmp/tmpk1fs2lss/565.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpk1fs2lss/565.json'
+[Config file]: /tmp/tmpxi489rxh/443.json
+[Unhandled Error] KeyError('/tmp/tmpxi489rxh/443.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpxi489rxh/443.json'
+[Config file]: /tmp/tmpyv_4q65v/418.json
+[Unhandled Error] KeyError('/tmp/tmpyv_4q65v/418.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpyv_4q65v/418.json'
+[Config file]: /tmp/tmpy2nx7d85/567.json
+[Unhandled Error] KeyError('/tmp/tmpy2nx7d85/567.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy2nx7d85/567.json'
+[Config file]: /tmp/tmp5o10rfg1/667.json
+[Unhandled Error] KeyError('/tmp/tmp5o10rfg1/667.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5o10rfg1/667.json'
+[Config file]: /tmp/tmpess3b5ow/553.json
+[Unhandled Error] KeyError('/tmp/tmpess3b5ow/553.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpess3b5ow/553.json'
+[Config file]: config_files/401.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/630.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/624.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/682.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/581.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/634.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/628.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/402.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/672.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/27.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/29.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/595.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/714.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/734.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/622.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/723.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/562.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/645.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/643.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/727.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 278, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: /tmp/tmpsdhurnkz/715.json
+[Unhandled Error] KeyError('/tmp/tmpsdhurnkz/715.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpsdhurnkz/715.json'
+[Config file]: /tmp/tmpfj45c0i7/617.json
+[Unhandled Error] KeyError('/tmp/tmpfj45c0i7/617.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfj45c0i7/617.json'
+[Config file]: /tmp/tmps8zmos8o/30.json
+[Unhandled Error] KeyError('/tmp/tmps8zmos8o/30.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmps8zmos8o/30.json'
+[Config file]: /tmp/tmpni794o1k/635.json
+[Unhandled Error] KeyError('/tmp/tmpni794o1k/635.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpni794o1k/635.json'
+[Config file]: /tmp/tmp5t2x1lk4/724.json
+[Unhandled Error] KeyError('/tmp/tmp5t2x1lk4/724.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5t2x1lk4/724.json'
+[Config file]: /tmp/tmp9m1mmpe1/406.json
+[Unhandled Error] KeyError('/tmp/tmp9m1mmpe1/406.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9m1mmpe1/406.json'
+[Config file]: /tmp/tmpvkxrni02/633.json
+[Unhandled Error] KeyError('/tmp/tmpvkxrni02/633.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpvkxrni02/633.json'
+[Config file]: /tmp/tmpy9grd01u/642.json
+[Unhandled Error] KeyError('/tmp/tmpy9grd01u/642.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy9grd01u/642.json'
+[Config file]: /tmp/tmp8wc1p1x2/609.json
+[Unhandled Error] KeyError('/tmp/tmp8wc1p1x2/609.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8wc1p1x2/609.json'
+[Config file]: /tmp/tmpwmkqbiaw/648.json
+[Unhandled Error] KeyError('/tmp/tmpwmkqbiaw/648.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpwmkqbiaw/648.json'
+[Config file]: /tmp/tmp3cv2gba0/627.json
+[Unhandled Error] KeyError('/tmp/tmp3cv2gba0/627.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3cv2gba0/627.json'
+[Config file]: /tmp/tmp4__ow7bx/580.json
+[Unhandled Error] KeyError('/tmp/tmp4__ow7bx/580.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4__ow7bx/580.json'
+[Config file]: /tmp/tmpaghc732f/625.json
+[Unhandled Error] KeyError('/tmp/tmpaghc732f/625.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpaghc732f/625.json'
+[Config file]: /tmp/tmp116gpzjt/604.json
+[Unhandled Error] KeyError('/tmp/tmp116gpzjt/604.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp116gpzjt/604.json'
+[Config file]: /tmp/tmp7in6v2dg/599.json
+[Unhandled Error] KeyError('/tmp/tmp7in6v2dg/599.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp7in6v2dg/599.json'
+[Config file]: /tmp/tmp9pgt9kgi/735.json
+[Unhandled Error] KeyError('/tmp/tmp9pgt9kgi/735.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp9pgt9kgi/735.json'
+[Config file]: /tmp/tmp_flqr1ha/641.json
+[Unhandled Error] KeyError('/tmp/tmp_flqr1ha/641.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp_flqr1ha/641.json'
+[Config file]: /tmp/tmpr__lkxf5/407.json
+[Unhandled Error] KeyError('/tmp/tmpr__lkxf5/407.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpr__lkxf5/407.json'
+[Config file]: /tmp/tmp0b_dnrpe/730.json
+[Unhandled Error] KeyError('/tmp/tmp0b_dnrpe/730.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0b_dnrpe/730.json'
+[Config file]: /tmp/tmp3m5gj8rx/726.json
+[Unhandled Error] KeyError('/tmp/tmp3m5gj8rx/726.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3m5gj8rx/726.json'
+[Config file]: /tmp/tmputd5f72t/616.json
+[Unhandled Error] KeyError('/tmp/tmputd5f72t/616.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmputd5f72t/616.json'
+[Config file]: /tmp/tmp5ibnvx9s/611.json
+[Unhandled Error] KeyError('/tmp/tmp5ibnvx9s/611.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp5ibnvx9s/611.json'
+[Config file]: /tmp/tmp3j0f2t5w/410.json
+[Unhandled Error] KeyError('/tmp/tmp3j0f2t5w/410.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp3j0f2t5w/410.json'
+[Config file]: /tmp/tmpymh8qj56/640.json
+[Unhandled Error] KeyError('/tmp/tmpymh8qj56/640.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpymh8qj56/640.json'
+[Config file]: /tmp/tmpgz8uds6s/614.json
+[Unhandled Error] KeyError('/tmp/tmpgz8uds6s/614.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpgz8uds6s/614.json'
+[Config file]: /tmp/tmp7l3561mz/716.json
+[Unhandled Error] KeyError('/tmp/tmp7l3561mz/716.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp7l3561mz/716.json'
+[Config file]: /tmp/tmpfnddowct/729.json
+[Unhandled Error] KeyError('/tmp/tmpfnddowct/729.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfnddowct/729.json'
+[Config file]: /tmp/tmpn752ys6c/631.json
+[Unhandled Error] KeyError('/tmp/tmpn752ys6c/631.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpn752ys6c/631.json'
+[Config file]: /tmp/tmp00q7jffy/597.json
+[Unhandled Error] KeyError('/tmp/tmp00q7jffy/597.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp00q7jffy/597.json'
+[Config file]: /tmp/tmpzsgr0qjs/607.json
+[Unhandled Error] KeyError('/tmp/tmpzsgr0qjs/607.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpzsgr0qjs/607.json'
+[Config file]: /tmp/tmp4tm4hj2q/612.json
+[Unhandled Error] KeyError('/tmp/tmp4tm4hj2q/612.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4tm4hj2q/612.json'
+[Config file]: /tmp/tmp4mpu1kq_/671.json
+[Unhandled Error] KeyError('/tmp/tmp4mpu1kq_/671.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4mpu1kq_/671.json'
+[Config file]: /tmp/tmpdz3xnclo/31.json
+[Unhandled Error] KeyError('/tmp/tmpdz3xnclo/31.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdz3xnclo/31.json'
+[Config file]: /tmp/tmp64t9xwjd/728.json
+[Unhandled Error] KeyError('/tmp/tmp64t9xwjd/728.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp64t9xwjd/728.json'
+[Config file]: /tmp/tmpy6bw2e0k/675.json
+[Unhandled Error] KeyError('/tmp/tmpy6bw2e0k/675.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpy6bw2e0k/675.json'
+[Config file]: /tmp/tmph5ipuwbs/652.json
+[Unhandled Error] KeyError('/tmp/tmph5ipuwbs/652.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmph5ipuwbs/652.json'
+[Config file]: /tmp/tmp01gbkr43/606.json
+[Unhandled Error] KeyError('/tmp/tmp01gbkr43/606.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp01gbkr43/606.json'
+[Config file]: /tmp/tmp1p8ivrku/651.json
+[Unhandled Error] KeyError('/tmp/tmp1p8ivrku/651.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp1p8ivrku/651.json'
+[Config file]: /tmp/tmpac652qzr/649.json
+[Unhandled Error] KeyError('/tmp/tmpac652qzr/649.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpac652qzr/649.json'
+[Config file]: /tmp/tmp1oa0wdaw/733.json
+[Unhandled Error] KeyError('/tmp/tmp1oa0wdaw/733.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp1oa0wdaw/733.json'
+[Config file]: /tmp/tmp2hbmj2x5/602.json
+[Unhandled Error] KeyError('/tmp/tmp2hbmj2x5/602.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp2hbmj2x5/602.json'
+[Config file]: /tmp/tmpnww1fgis/613.json
+[Unhandled Error] KeyError('/tmp/tmpnww1fgis/613.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpnww1fgis/613.json'
+[Config file]: /tmp/tmpqd7t8tch/66.json
+[Unhandled Error] KeyError('/tmp/tmpqd7t8tch/66.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpqd7t8tch/66.json'
+[Config file]: /tmp/tmpsam7pjaj/681.json
+[Unhandled Error] KeyError('/tmp/tmpsam7pjaj/681.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpsam7pjaj/681.json'
+[Config file]: /tmp/tmp845b_9jx/683.json
+[Unhandled Error] KeyError('/tmp/tmp845b_9jx/683.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp845b_9jx/683.json'
+[Config file]: /tmp/tmp992507po/605.json
+[Unhandled Error] KeyError('/tmp/tmp992507po/605.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp992507po/605.json'
+[Config file]: /tmp/tmphwegu6cb/632.json
+[Unhandled Error] KeyError('/tmp/tmphwegu6cb/632.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmphwegu6cb/632.json'
+[Config file]: /tmp/tmpopygnafv/608.json
+[Unhandled Error] KeyError('/tmp/tmpopygnafv/608.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpopygnafv/608.json'
+[Config file]: /tmp/tmpurwzezsm/684.json
+[Unhandled Error] KeyError('/tmp/tmpurwzezsm/684.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpurwzezsm/684.json'
+[Config file]: /tmp/tmpr_m7kefb/629.json
+[Unhandled Error] KeyError('/tmp/tmpr_m7kefb/629.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpr_m7kefb/629.json'
+[Config file]: /tmp/tmpyfv8wxry/600.json
+[Unhandled Error] KeyError('/tmp/tmpyfv8wxry/600.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpyfv8wxry/600.json'
+[Config file]: /tmp/tmpdo21vkdp/650.json
+[Unhandled Error] KeyError('/tmp/tmpdo21vkdp/650.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdo21vkdp/650.json'
+[Config file]: /tmp/tmp805y2dys/673.json
+[Unhandled Error] KeyError('/tmp/tmp805y2dys/673.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp805y2dys/673.json'
+[Config file]: /tmp/tmpckoeexr3/598.json
+[Unhandled Error] KeyError('/tmp/tmpckoeexr3/598.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpckoeexr3/598.json'
+[Config file]: /tmp/tmpiubbq2j0/725.json
+[Unhandled Error] KeyError('/tmp/tmpiubbq2j0/725.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpiubbq2j0/725.json'
+[Config file]: /tmp/tmpqwwyi3e_/731.json
+[Unhandled Error] KeyError('/tmp/tmpqwwyi3e_/731.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpqwwyi3e_/731.json'
+[Config file]: /tmp/tmp4h6iogpz/404.json
+[Unhandled Error] KeyError('/tmp/tmp4h6iogpz/404.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4h6iogpz/404.json'
+[Config file]: /tmp/tmpcd3z74ok/405.json
+[Unhandled Error] KeyError('/tmp/tmpcd3z74ok/405.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpcd3z74ok/405.json'
+[Config file]: /tmp/tmpixpuk5dj/582.json
+[Unhandled Error] KeyError('/tmp/tmpixpuk5dj/582.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpixpuk5dj/582.json'
+[Config file]: /tmp/tmpsms7drjt/409.json
+[Unhandled Error] KeyError('/tmp/tmpsms7drjt/409.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpsms7drjt/409.json'
+[Config file]: /tmp/tmpjaq62hny/732.json
+[Unhandled Error] KeyError('/tmp/tmpjaq62hny/732.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpjaq62hny/732.json'
+[Config file]: /tmp/tmpopl6nac7/403.json
+[Unhandled Error] KeyError('/tmp/tmpopl6nac7/403.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpopl6nac7/403.json'
+[Config file]: /tmp/tmp0oycwfd2/28.json
+[Unhandled Error] KeyError('/tmp/tmp0oycwfd2/28.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp0oycwfd2/28.json'
+[Config file]: /tmp/tmp7kpjajsw/717.json
+[Unhandled Error] KeyError('/tmp/tmp7kpjajsw/717.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp7kpjajsw/717.json'
+[Config file]: /tmp/tmpqg04plyb/718.json
+[Unhandled Error] KeyError('/tmp/tmpqg04plyb/718.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpqg04plyb/718.json'
+[Config file]: /tmp/tmpigzc_sq_/596.json
+[Unhandled Error] KeyError('/tmp/tmpigzc_sq_/596.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpigzc_sq_/596.json'
+[Config file]: /tmp/tmpl632c9ir/722.json
+[Unhandled Error] KeyError('/tmp/tmpl632c9ir/722.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpl632c9ir/722.json'
+[Config file]: /tmp/tmpv3bvgfwb/583.json
+[Unhandled Error] KeyError('/tmp/tmpv3bvgfwb/583.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpv3bvgfwb/583.json'
+[Config file]: /tmp/tmpdjnny8uy/619.json
+[Unhandled Error] KeyError('/tmp/tmpdjnny8uy/619.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdjnny8uy/619.json'
+[Config file]: /tmp/tmpj26uhmus/626.json
+[Unhandled Error] KeyError('/tmp/tmpj26uhmus/626.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpj26uhmus/626.json'
+[Config file]: /tmp/tmpiu9e2ov1/408.json
+[Unhandled Error] KeyError('/tmp/tmpiu9e2ov1/408.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpiu9e2ov1/408.json'
+[Config file]: /tmp/tmpbjxph_9q/601.json
+[Unhandled Error] KeyError('/tmp/tmpbjxph_9q/601.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpbjxph_9q/601.json'
+[Config file]: /tmp/tmp114kzmik/68.json
+[Unhandled Error] KeyError('/tmp/tmp114kzmik/68.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp114kzmik/68.json'
+[Config file]: /tmp/tmpb6bcim0i/620.json
+[Unhandled Error] KeyError('/tmp/tmpb6bcim0i/620.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpb6bcim0i/620.json'
+[Config file]: /tmp/tmprad58kuw/639.json
+[Unhandled Error] KeyError('/tmp/tmprad58kuw/639.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmprad58kuw/639.json'
+[Config file]: /tmp/tmpqtcvb2zf/644.json
+[Unhandled Error] KeyError('/tmp/tmpqtcvb2zf/644.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpqtcvb2zf/644.json'
+[Config file]: /tmp/tmpgqaf_1ib/646.json
+[Unhandled Error] KeyError('/tmp/tmpgqaf_1ib/646.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpgqaf_1ib/646.json'
+[Config file]: /tmp/tmppwb_o4kw/399.json
+[Unhandled Error] KeyError('/tmp/tmppwb_o4kw/399.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmppwb_o4kw/399.json'
+[Config file]: /tmp/tmpfinfiu_j/674.json
+[Unhandled Error] KeyError('/tmp/tmpfinfiu_j/674.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpfinfiu_j/674.json'
+[Config file]: /tmp/tmpdg6q2bt9/603.json
+[Unhandled Error] KeyError('/tmp/tmpdg6q2bt9/603.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdg6q2bt9/603.json'
+[Config file]: /tmp/tmpm_qf4dhs/615.json
+[Unhandled Error] KeyError('/tmp/tmpm_qf4dhs/615.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpm_qf4dhs/615.json'
+[Config file]: /tmp/tmpj3ior3iz/721.json
+[Unhandled Error] KeyError('/tmp/tmpj3ior3iz/721.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpj3ior3iz/721.json'
+[Config file]: /tmp/tmps12wmmf9/636.json
+[Unhandled Error] KeyError('/tmp/tmps12wmmf9/636.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmps12wmmf9/636.json'
+[Config file]: /tmp/tmp2hi98gb2/69.json
+[Unhandled Error] KeyError('/tmp/tmp2hi98gb2/69.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp2hi98gb2/69.json'
+[Config file]: /tmp/tmpi24azryu/720.json
+[Unhandled Error] KeyError('/tmp/tmpi24azryu/720.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpi24azryu/720.json'
+[Config file]: /tmp/tmpp39bv45t/685.json
+[Unhandled Error] KeyError('/tmp/tmpp39bv45t/685.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpp39bv45t/685.json'
+[Config file]: /tmp/tmp8w4feyi6/564.json
+[Unhandled Error] KeyError('/tmp/tmp8w4feyi6/564.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp8w4feyi6/564.json'
+[Config file]: /tmp/tmpe8oxbpt0/791.json
+[Unhandled Error] KeyError('/tmp/tmpe8oxbpt0/791.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpe8oxbpt0/791.json'
+[Config file]: /tmp/tmpmoyaj0vr/555.json
+[Unhandled Error] KeyError('/tmp/tmpmoyaj0vr/555.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpmoyaj0vr/555.json'
+[Config file]: /tmp/tmp566oc3lg/552.json
+[Unhandled Error] KeyError('/tmp/tmp566oc3lg/552.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp566oc3lg/552.json'
+[Config file]: /tmp/tmp4vgbdfkx/563.json
+[Unhandled Error] KeyError('/tmp/tmp4vgbdfkx/563.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp4vgbdfkx/563.json'
+[Config file]: /tmp/tmp_tre613k/565.json
+[Unhandled Error] KeyError('/tmp/tmp_tre613k/565.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmp_tre613k/565.json'
+[Config file]: /tmp/tmpodvav7y7/686.json
+[Unhandled Error] KeyError('/tmp/tmpodvav7y7/686.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpodvav7y7/686.json'
+[Config file]: /tmp/tmpdne_pzv4/687.json
+[Unhandled Error] KeyError('/tmp/tmpdne_pzv4/687.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdne_pzv4/687.json'
+[Config file]: /tmp/tmpdjdkqrte/554.json
+[Unhandled Error] KeyError('/tmp/tmpdjdkqrte/554.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpdjdkqrte/554.json'
+[Config file]: /tmp/tmpc14pgzpg/688.json
+[Unhandled Error] KeyError('/tmp/tmpc14pgzpg/688.json')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 286, in test
+    results[config_file]['intent'] = intent
+KeyError: '/tmp/tmpc14pgzpg/688.json'

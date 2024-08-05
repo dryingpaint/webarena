@@ -126,14 +126,14 @@ class RenderHelper(object):
 
         self.action_set_tag = action_set_tag
 
-        self.render_file = open(
-            Path(result_dir) / f"render_{task_id}.html", "a+"
-        )
-        self.render_file.truncate(0)
-        # write init template
-        self.render_file.write(HTML_TEMPLATE.format(body=f"{_config_str}"))
-        self.render_file.read()
-        self.render_file.flush()
+        # self.render_file = open(
+        #     Path(result_dir) / f"render_{task_id}.html", "a+"
+        # )
+        # self.render_file.truncate(0)
+        # # write init template
+        # self.render_file.write(HTML_TEMPLATE.format(body=f"{_config_str}"))
+        # self.render_file.read()
+        # self.render_file.flush()
 
     def render(
         self,
