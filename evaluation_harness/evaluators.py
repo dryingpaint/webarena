@@ -89,8 +89,7 @@ class StringEvaluator(Evaluator):
     @beartype
     def exact_match(ref: str, pred: str) -> float:
         return float(
-            StringEvaluator.clean_answer(pred)
-            == StringEvaluator.clean_answer(ref)
+            (StringEvaluator.clean_answer(ref)) in StringEvaluator.clean_answer(pred)
         )
 
     @staticmethod
@@ -138,11 +137,11 @@ class StringEvaluator(Evaluator):
             match approach:
                 case "exact_match":
                     if isinstance(value, list):
-                        for value in list:
-                            include = self.must_include(
+                        for must_value in value:
+                            print(must_value)
+                            include = self.exact_match(
                                 ref=must_value,
                                 pred=pred,
-                                tokenize=(len(value) == 1),
                             )
                             if include:
                                 break
@@ -150,27 +149,14 @@ class StringEvaluator(Evaluator):
                             score = 0
                     else:
                         score *= self.exact_match(ref=value, pred=pred)
-
                 case "must_include":
                     assert isinstance(value, list)
                     for must_value in value:
-                        if isinstance(must_value, str):
-                            score *= self.must_include(
-                                ref=must_value,
-                                pred=pred,
-                                tokenize=(len(value) == 1),
-                            )
-                        else:
-                            for value in must_value:
-                                include = self.must_include(
-                                    ref=must_value,
-                                    pred=pred,
-                                    tokenize=(len(value) == 1),
-                                )
-                                if include:
-                                    break
-                            else:
-                                score = 0
+                        score *= self.must_include(
+                            ref=must_value,
+                            pred=pred,
+                            tokenize=(len(value) == 1),
+                        )
                 case "fuzzy_match":
                     intent = configs["intent"]
                     if value == "N/A":

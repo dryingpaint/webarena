@@ -7427,3 +7427,129 @@ playwright._impl._api_types.TimeoutError: Timeout 30000.0ms exceeded while waiti
 =========================== logs ===========================
 waiting for event "load"
 ============================================================
+[Config file]: config_files/69.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/31.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/68.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/399.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/67.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/66.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/29.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/28.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/27.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/406.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/408.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/407.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/405.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/401.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/402.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/403.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/409.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 281, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/265.json
+[Unhandled Error] BeartypeCallHintParamViolation("@beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 348, in test
+    score = evaluator(
+  File "<@beartype(evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x7ef86b254790>", line 112, in __call__
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 374, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 165, in __call__
+    include = self.must_include(
+  File "<@beartype(evaluation_harness.evaluators.StringEvaluator.must_include) at 0x7ef86b233d90>", line 22, in must_include
+beartype.roar.BeartypeCallHintParamViolation: @beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.
+[Config file]: config_files/265.json
+[Unhandled Error] BeartypeCallHintParamViolation("@beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 348, in test
+    score = evaluator(
+  File "<@beartype(evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x7cd3e77c4790>", line 112, in __call__
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 374, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ubuntu/webarena/evaluation_harness/evaluators.py", line 165, in __call__
+    include = self.must_include(
+  File "<@beartype(evaluation_harness.evaluators.StringEvaluator.must_include) at 0x7cd3e77a3d90>", line 22, in must_include
+beartype.roar.BeartypeCallHintParamViolation: @beartyped evaluation_harness.evaluators.StringEvaluator.must_include() parameter ref=['457km', '457 km'] violates type hint <class 'str'>, as list ['457km', '457 km'] not instance of str.

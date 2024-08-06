@@ -11,6 +11,7 @@ import threading
 import csv
 import math
 
+
 hostname = 'ec2-3-145-147-254.us-east-2.compute.amazonaws.com'
 os.environ['HOSTNAME'] = hostname
 
@@ -23,7 +24,7 @@ os.environ['WIKIPEDIA'] = f"http://{hostname}:8888"
 os.environ['HOMEPAGE'] = f"http://{hostname}:4399"
 
 class TaskType(Enum):
-    SHOPPING = 'shopping'
+    # SHOPPING = 'shopping'
     REDDIT = 'reddit'
     WIKI = 'wikipedia'
     MAP = 'map'
@@ -33,12 +34,13 @@ class TaskType(Enum):
 files_by_task = {task.value: [] for task in TaskType}
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--type", 
+parser.add_argument("--dir", 
                     type=str, 
-                    required=False,
-                    default="shopping", 
+                    required=True,
                     )
 args = parser.parse_args()
+
+dir = args.dir
 
 files = os.listdir('config_files')
 for file in files:
@@ -48,15 +50,11 @@ for file in files:
     with open(path) as f:
         config = json.load(f)
         for site in config['sites']:
+            if site == 'shopping':
+                continue
             files_by_task[site].append(file)
 
-# print(files_by_task)
-assert args.type in files_by_task
-
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-num_cores = multiprocessing.cpu_count()
-# Set max_parallel to 1.5 times the number of cores
-max_parallel = int(10)
 
 def clear_port(port):
     try:
@@ -86,7 +84,9 @@ def run_background_server(port):
     logging.info(f"Starting background server: {cmd}")
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
     
-    log_file = f"run_outputs/{args.type}/background_server_{port}.log"
+    if dir not in os.listdir('run_outputs'):
+        os.mkdir(f"run_outputs/{dir}")
+    log_file = f"run_outputs/{dir}/background_server_{port}.log"
     threading.Thread(target=log_output, args=(process, log_file, f"BG Server {port}"), daemon=True).start()
     
     return process
@@ -101,12 +101,12 @@ def run_task(port):
         
         cmd = f"""
         cd ~/webarena
-        python -u run.py --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
+        python -u run.py --dir {args.dir} --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
         """
         
         logging.info(f"Executing command for port {port}")
         
-        out_file = f"run_outputs/{args.type}/out_{port}.txt"
+        out_file = f"run_outputs/{dir}/out_{port}.txt"
         with open(out_file, "w") as f:
             proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, 
                                     stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
@@ -126,38 +126,32 @@ def run_task(port):
     except Exception as e:
         logging.error(f"Unexpected error for port {port}: {str(e)}")
 
-def worker(task_range):
-    for port in task_range:
-        run_task(port)
+def worker(task_type, port):
+    run_task(port)
 
 if __name__ == '__main__':
-    assert args.type in files_by_task
-    
-    site_tasks = [int(file.replace('.json','')) for file in files_by_task[args.type]]
-    site_tasks = sorted(site_tasks)
-    
-    os.makedirs(f"run_outputs/{args.type}", exist_ok=True)
-    
-    total_tasks = len(site_tasks)
-    
-    logging.info(f"Starting execution with {total_tasks} tasks using {max_parallel} parallel threads")
-    
-    # Calculate the number of tasks per thread
-    tasks_per_thread = math.ceil(total_tasks / max_parallel)
-    
-    threads = []
-    for i in range(max_parallel):
-        start_idx = i * tasks_per_thread
-        end_idx = min((i + 1) * tasks_per_thread, total_tasks)
-        task_range = site_tasks[start_idx:end_idx]
-        
-        if task_range:  # Only create a thread if there are tasks to process
-            t = threading.Thread(target=worker, args=(task_range,))
-            t.start()
-            threads.append(t)
-    
-    # Wait for all threads to finish
-    for t in threads:
-        t.join()
-    
+    for task_type in TaskType:
+        os.makedirs(f"run_outputs/{task_type.value}", exist_ok=True)
+
+    all_tasks = []
+    for task_type in TaskType:
+        site_tasks = [int(file.replace('.json','')) for file in files_by_task[task_type.value]]
+        site_tasks = sorted(site_tasks)
+        all_tasks.append((task_type, site_tasks))
+
+    logging.info(f"Starting execution with 6 parallel tasks, one for each task type")
+
+    while any(tasks for _, tasks in all_tasks):
+        threads = []
+        for task_type, tasks in all_tasks:
+            if tasks:
+                port = tasks.pop(0)
+                t = threading.Thread(target=worker, args=(task_type.value, port))
+                t.start()
+                threads.append(t)
+
+        # Wait for all threads in this batch to finish
+        for t in threads:
+            t.join()
+
     logging.info("All tasks completed")

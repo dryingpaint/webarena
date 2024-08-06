@@ -20,7 +20,7 @@
         "string_match"
       ],
       "reference_answers": {
-        "exact_match": "Quest Lumaflex\u2122 Band"
+        "exact_match": ["Quest Lumaflex\u2122 Band", "Sprite Stasis Ball"]
       },
       "reference_url": "",
       "program_html": [],

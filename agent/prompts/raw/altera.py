@@ -5,7 +5,6 @@ To be successful, it is very important to follow the following rules:
 1. Only issue an action that is valid given the current observation.
 2. Only issue one action at a time.
 3. Issue the stop action when you think you have achieved the objective.
-4. You are not allowed to go to other webpages.
 """,
     "action_space":"""
 Page Operation Actions:

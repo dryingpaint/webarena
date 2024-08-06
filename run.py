@@ -146,6 +146,7 @@ def config() -> argparse.Namespace:
     # example config
     parser.add_argument("--test_start_idx", type=int, default=0)
     parser.add_argument("--test_end_idx", type=int, default=1000)
+    parser.add_argument("--dir", type=str, default="")
 
     # logging related
     parser.add_argument("--result_dir", type=str, default="")
@@ -363,7 +364,7 @@ def test(
             date = datetime.datetime.now()
             results[config_file]['time'] = f'{date.month}/{date.day} {date.hour}:{date.minute}'
 
-            with open("results.csv", "a", newline="") as f:
+            with open(f"results_{args.dir}.csv", "a", newline="") as f:
                 w = csv.DictWriter(f, results[config_file].keys())
                 w.writerow(results[config_file])
 

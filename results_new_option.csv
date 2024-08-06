@@ -1,0 +1,4 @@
+/tmp/tmpjd5xf6kh/0.json,What is the top-1 best-selling product in 2022,,4 s,The top-1 best-selling product is 'Sprite Stasis Ball 65 cm' with a quantity of 6.,PASS,8/6 21:14
+config_files/97.json,Tell me the distance to drive from Carnegie Mellon University to the top computer science school in massachusetts,,21 s,The distance to drive from Carnegie Mellon University to the top computer science school in Massachusetts is 914 km,FAIL,8/6 21:14
+/tmp/tmpakk86jcl/27.json,Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the Showerthoughts forum.,,22 s,N/A,FAIL,8/6 21:14
+config_files/7.json,Tell me the full address of all international airports that are within a driving distance of 50 km to Carnegie Mellon University,,49 s,"Pittsburgh International Airport, Southern Beltway, Findlay Township, Allegheny County, 15231, United States",PASS,8/6 21:15
