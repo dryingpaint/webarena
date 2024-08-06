@@ -162,3 +162,5 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/run_outputs/*
+/traces/*

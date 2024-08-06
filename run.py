@@ -247,7 +247,6 @@ def test(
 
     results = {}
     for config_file in config_file_list:
-        results[config_file] = {}
         try:
             render_helper = RenderHelper(
                 config_file, args.result_dir, args.action_set_tag
@@ -255,7 +254,11 @@ def test(
 
             # get intent
             with open(config_file) as f:
-                _c = json.load(f)
+                try:
+                    _c = json.load(f)
+                except:
+                    print(f"Failed to load file: {config_file}")
+                    continue
                 intent = _c["intent"]
                 task_id = _c["task_id"]
                 # automatically login
@@ -281,6 +284,7 @@ def test(
                     with open(config_file, "w") as f:
                         json.dump(_c, f)
 
+            results[config_file] = {'config_file': config_file}
             logger.info(f"[Config file]: {config_file}")
             logger.info(f"[Intent]: {intent}")
             results[config_file]['intent'] = intent
@@ -358,7 +362,6 @@ def test(
             results[config_file]['outcome'] = f"PASS" if score == 1 else "FAIL"
             date = datetime.datetime.now()
             results[config_file]['time'] = f'{date.month}/{date.day} {date.hour}:{date.minute}'
-            results['config_file'] = config_file
 
             with open("results.csv", "a", newline="") as f:
                 w = csv.DictWriter(f, results[config_file].keys())

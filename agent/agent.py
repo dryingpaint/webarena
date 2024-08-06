@@ -340,11 +340,15 @@ def construct_agent(args: argparse.Namespace) -> Agent:
             prompt_constructor = prompt_constructor,
         )
     elif args.agent_type == "altera":
-        with open(args.instruction_path) as f:
-            file = json.load(f)
-            game_env = file['game_env']
-            action_space = file['action_space']
-        agent = AlteraAgent(game_env, action_space, args.port)
+        try:
+            with open(args.instruction_path) as f:
+                file = json.load(f)
+                game_env = file['game_env']
+                action_space = file['action_space']
+            agent = AlteraAgent(game_env, action_space, args.port)
+        except:
+            print(f"Failed to load config file: {args.instruction_path}")
+            return
     else:
         raise NotImplementedError(
             f"agent type {args.agent_type} not implemented"

@@ -11,7 +11,7 @@ import threading
 import csv
 import math
 
-hostname = 'ec2-3-139-66-38.us-east-2.compute.amazonaws.com'
+hostname = 'ec2-13-59-52-33.us-east-2.compute.amazonaws.com'
 os.environ['HOSTNAME'] = hostname
 
 os.environ['SHOPPING'] = f"http://{hostname}:7770"
@@ -21,7 +21,7 @@ os.environ['GITLAB'] = f"http://{hostname}:8023"
 os.environ['MAP'] = f"http://{hostname}:3000"
 os.environ['WIKIPEDIA'] = f"http://{hostname}:8888"
 os.environ['HOMEPAGE'] = f"http://{hostname}:4399"
-os.environ['OPENAI_API_KEY'] = 'sk-proj-f4PLKM1j5USHLSkt9TgsT3BlbkFJ9YCOhryOzgnaJigWq0wx'
+os.environ['OPENAI_API_KEY'] = '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'
 
 class TaskType(Enum):
     SHOPPING = 'shopping'
@@ -57,7 +57,7 @@ assert args.type in files_by_task
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 num_cores = multiprocessing.cpu_count()
 # Set max_parallel to 1.5 times the number of cores
-max_parallel = int(num_cores * 1.5)
+max_parallel = int(num_cores / 2)
 
 def clear_port(port):
     try:

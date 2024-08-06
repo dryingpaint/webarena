@@ -176,16 +176,17 @@ class RenderHelper(object):
         new_content += f"{action_str}\n"
 
         # add new content
-        self.render_file.seek(0)
-        html = self.render_file.read()
-        html_body = re.findall(r"<body>(.*?)</body>", html, re.DOTALL)[0]
-        html_body += new_content
+        # self.render_file.seek(0)
+        # html = self.render_file.read()
+        # html_body = re.findall(r"<body>(.*?)</body>", html, re.DOTALL)[0]
+        # html_body += new_content
 
-        html = HTML_TEMPLATE.format(body=html_body)
-        self.render_file.seek(0)
-        self.render_file.truncate()
-        self.render_file.write(html)
-        self.render_file.flush()
+        # html = HTML_TEMPLATE.format(body=html_body)
+        # self.render_file.seek(0)
+        # self.render_file.truncate()
+        # self.render_file.write(html)
+        # self.render_file.flush()
 
     def close(self) -> None:
-        self.render_file.close()
+        pass
+        # self.render_file.close()
