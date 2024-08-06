@@ -21,7 +21,6 @@ os.environ['GITLAB'] = f"http://{hostname}:8023"
 os.environ['MAP'] = f"http://{hostname}:3000"
 os.environ['WIKIPEDIA'] = f"http://{hostname}:8888"
 os.environ['HOMEPAGE'] = f"http://{hostname}:4399"
-os.environ['OPENAI_API_KEY'] = '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'
 
 class TaskType(Enum):
     SHOPPING = 'shopping'
@@ -57,7 +56,7 @@ assert args.type in files_by_task
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 num_cores = multiprocessing.cpu_count()
 # Set max_parallel to 1.5 times the number of cores
-max_parallel = int(num_cores / 2)
+max_parallel = int(10)
 
 def clear_port(port):
     try:
@@ -134,7 +133,8 @@ def run_batch(batch):
     pool.join()
 
 if __name__ == '__main__':
-    site_tasks = [file.replace('.json','') for file in files_by_task[args.type]]
+    site_tasks = [int(file.replace('.json','')) for file in files_by_task[args.type]]
+    site_tasks = sorted(site_tasks)
     
     os.makedirs(f"run_outputs/{args.type}", exist_ok=True)
     
