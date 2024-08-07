@@ -8227,3 +8227,1941 @@ Traceback (most recent call last):
   File "/home/ubuntu/webarena/run.py", line 282, in test
     assert os.path.exists(_c["storage_state"])
 AssertionError
+[Config file]: /tmp/tmpih8wlwv3/27.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8127)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7dad536bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp1uk88s04/31.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x711983ebf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpqsggvwoe/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7b5c085c7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp1w7qec46/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x714f6517b250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp8aj32rwx/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7633946bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp5cjczzsj/30.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8130)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x74805b3bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpuvtbt7z8/31.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x74515b6b7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpbjacv834/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7b65545cb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpjcdb1cpp/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x73cfe55c3250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpxg9mmf_9/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x715120ab7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmprsgs5gd0/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x756df07d7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpum728aj_/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7e33e117f250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp9_ewilh_/30.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8130)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7e75f69bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpx5gqad7q/31.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7e68772bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpiaz1g5bo/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7397eea6f250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpyu_01_gr/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7ef1e67bb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp66n5utk_/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x75a93a1c7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp3iyoml5v/27.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8127)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x796c83dcb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp8_pwf5_e/31.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7b12193b7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpbf7p3g87/30.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8130)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7a110ccbb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp0fe062ww/31.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x762fb09c7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmptpvqpy6k/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x79eebcfaf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpyy0_xyd4/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x721696383250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpu2r1fsap/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x78629aec7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmph1kavznt/27.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8127)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7e503f5c3250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpp9orqu3k/30.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8130)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7ab38b3bb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpfqahcnge/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x797a1d2b3250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp7ia1i71m/27.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8127)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7576937bf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpobsr7g9_/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7068befbf250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpfi05ghpd/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7973458bb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpidpc4_8e/68.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8168)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7d21757c7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpmxaki4wm/399.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8499)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x71919c9cb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp9s8whazd/69.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8169)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x761eb10b7250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp31x8p87n/400.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8500)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7bcaa53bb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp8pxjvt7d/406.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8506)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x787a449ab250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpd4pa53r9/403.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8503)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7f821247b250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpr1pl8qjf/404.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8504)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7f5a2a07b250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp9_5kozvz/407.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8507)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7a4445b73250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp6vc2lfxz/30.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 294, in test
+    agent.reset(config_file)
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpno8g29w7/28.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7feb8b377250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpybwyeh84/29.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x781c01b77250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpdj84win3/66.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8166)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7e06b7ecb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp0ftsjw_p/27.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 233, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8127)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 312, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x6ffba4abb250>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 298, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 270, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 238, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
