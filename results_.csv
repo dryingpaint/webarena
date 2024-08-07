@@ -8,3 +8,7 @@
 /tmp/tmphurfdvq1/0.json,What is the top-1 best-selling product in 2022,,3 s,The top-1 best-selling product in 2022 is the 'Quest Lumaflex™ Band' priced at $19.00 with a quantity sold of 6.,FAIL,8/6 21:11
 /tmp/tmpw9a_8qga/0.json,What is the top-1 best-selling product in 2022,,4 s,"The top-1 best-selling product in 2022 is ""Quest Lumaflex™ Band"" with a quantity of 6.",FAIL,8/6 21:13
 /tmp/tmpy008ugcx/0.json,What is the top-1 best-selling product in 2022,,4 s,The top-1 best-selling product in 2022 is 'Sprite Stasis Ball 65 cm' priced at $27.00 with a quantity of 6.,PASS,8/6 21:13
+/tmp/tmp04hfsim6/95.json,Telll me the grand total of invoice 000000002.,,3 s,$194.40,FAIL,8/6 22:47
+/tmp/tmp0ivkqu2j/95.json,Telll me the grand total of invoice 000000002.,,4 s,$194.40,FAIL,8/6 22:50
+/tmp/tmp0toi8i39/95.json,Telll me the grand total of invoice 000000002.,,2 s,$194.40,FAIL,8/6 22:52
+/tmp/tmpc5i4_j5d/95.json,Telll me the grand total of invoice 000000002.,,351 s,Early stop: Reach max steps 30,FAIL,8/6 23:37

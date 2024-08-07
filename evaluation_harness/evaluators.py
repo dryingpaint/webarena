@@ -152,11 +152,24 @@ class StringEvaluator(Evaluator):
                 case "must_include":
                     assert isinstance(value, list)
                     for must_value in value:
-                        score *= self.must_include(
-                            ref=must_value,
-                            pred=pred,
-                            tokenize=(len(value) == 1),
-                        )
+                        if isinstance(must_value, list):
+                            for potential in must_value:
+                                include = self.must_include(
+                                    ref=potential,
+                                    pred=pred,
+                                    tokenize=(len(value) == 1),
+                                )
+                                if include:
+                                    score = include
+                                    break
+                            else:
+                                score = 0
+                        else:
+                            score *= self.must_include(
+                                ref=must_value,
+                                pred=pred,
+                                tokenize=(len(value) == 1),
+                            )
                 case "fuzzy_match":
                     intent = configs["intent"]
                     if value == "N/A":

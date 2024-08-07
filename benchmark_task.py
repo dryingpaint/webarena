@@ -76,7 +76,7 @@ def log_output(process, file_path, prefix):
             f.write(line)
             f.flush()
 
-def run_background_server(port):
+def run_background_server(port, task_type):
     actual_port = 8100 + int(port)
     clear_port(actual_port)
     
@@ -84,29 +84,27 @@ def run_background_server(port):
     logging.info(f"Starting background server: {cmd}")
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
     
-    if dir not in os.listdir('run_outputs'):
-        os.mkdir(f"run_outputs/{dir}")
-    log_file = f"run_outputs/{dir}/background_server_{port}.log"
+    log_file = f"run_outputs/{task_type}/background_server_{port}.log"
     threading.Thread(target=log_output, args=(process, log_file, f"BG Server {port}"), daemon=True).start()
     
     return process
 
-def run_task(port):
+def run_task(port, task_type):
     logging.info(f"Starting task for port {port}")
     
     try:
-        server_process = run_background_server(port)
+        server_process = run_background_server(port, task_type)
         
         time.sleep(5)  # Adjust as needed
         
         cmd = f"""
         cd ~/webarena
-        python -u run.py --dir {args.dir} --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
+        python -u run.py --dir {task_type} --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
         """
         
         logging.info(f"Executing command for port {port}")
         
-        out_file = f"run_outputs/{dir}/out_{port}.txt"
+        out_file = f"run_outputs/{task_type}/out_{port}.txt"
         with open(out_file, "w") as f:
             proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, 
                                     stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
@@ -120,14 +118,20 @@ def run_task(port):
         else:
             logging.info(f"Command for port {port} completed successfully")
         
-        server_process.terminate()
-        server_process.wait()
+        return server_process
     
     except Exception as e:
         logging.error(f"Unexpected error for port {port}: {str(e)}")
+        return None
 
-def worker(task_type, port):
-    run_task(port)
+def worker(task_queue, result_queue):
+    while True:
+        task = task_queue.get()
+        if task is None:
+            break
+        task_type, port = task
+        server_process = run_task(port, task_type)
+        result_queue.put(server_process)
 
 if __name__ == '__main__':
     for task_type in TaskType:
@@ -137,21 +141,47 @@ if __name__ == '__main__':
     for task_type in TaskType:
         site_tasks = [int(file.replace('.json','')) for file in files_by_task[task_type.value]]
         site_tasks = sorted(site_tasks)
-        all_tasks.append((task_type, site_tasks))
+        all_tasks.extend((task_type.value, port) for port in site_tasks)
 
     logging.info(f"Starting execution with 6 parallel tasks, one for each task type")
 
-    while any(tasks for _, tasks in all_tasks):
-        threads = []
-        for task_type, tasks in all_tasks:
-            if tasks:
-                port = tasks.pop(0)
-                t = threading.Thread(target=worker, args=(task_type.value, port))
-                t.start()
-                threads.append(t)
+    task_queue = multiprocessing.Queue()
+    result_queue = multiprocessing.Queue()
 
-        # Wait for all threads in this batch to finish
-        for t in threads:
-            t.join()
+    for task in all_tasks:
+        task_queue.put(task)
+
+    num_workers = min(6, len(all_tasks))
+    workers = []
+    for _ in range(num_workers):
+        worker_process = multiprocessing.Process(target=worker, args=(task_queue, result_queue))
+        worker_process.start()
+        workers.append(worker_process)
+
+    batch_size = 6
+    batch_processes = []
+
+    while not task_queue.empty() or any(worker.is_alive() for worker in workers):
+        while len(batch_processes) < batch_size and not result_queue.empty():
+            process = result_queue.get()
+            if process:
+                batch_processes.append(process)
+
+        if len(batch_processes) == batch_size or (task_queue.empty() and not result_queue.empty()):
+            # Terminate all processes in the current batch
+            for process in batch_processes:
+                process.terminate()
+                process.wait()
+            batch_processes.clear()
+
+        time.sleep(1)  # Avoid busy waiting
+
+    # Signal workers to stop
+    for _ in workers:
+        task_queue.put(None)
+
+    # Wait for all worker processes to finish
+    for worker_process in workers:
+        worker_process.join()
 
     logging.info("All tasks completed")
