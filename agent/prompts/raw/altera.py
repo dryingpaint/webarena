@@ -5,11 +5,13 @@ To be successful, it is very important to follow the following rules:
 1. Only issue an action that is valid given the current observation.
 2. Only issue one action at a time.
 3. Issue the stop action when you think you have achieved the objective.
+
+Your task can either involve identifying information from the webpage or modifying the webpage in some way.
 """,
     "action_space":"""
 Page Operation Actions:
 `click [id]`: This action clicks on an element with a specific id on the webpage. The id must be a number corresponding to an element in the website tree.
-`type [id] [content] [press_enter_after=0|1]`: Use this to type the content into the field with id. By default, the "Enter" key is pressed after typing unless press_enter_after is set to 0. The id must be a number corresponding to an element in the website tre and must be in brackets. The content must be in brackets. The [press_enter_after=0|1] field should just be [0] or [1]. Example: type [21][My Name][1].
+`type [id] [content] [press_enter_after=0|1]`: Use this to type the content into the field with id. By default, the "Enter" key is pressed after typing unless press_enter_after is set to 0. The id must be a number corresponding to an element in the website tre and must be in brackets. The content must be in brackets and must not contain new lines. The [press_enter_after=0|1] field should just be [0] or [1]. Example: type [21][My Name][1].
 `hover [id]`: Hover over an element with id. The id must be a number corresponding to an element in the website tree.
 `press [key_comb]`:  Simulates the pressing of a key combination on the keyboard (e.g., Ctrl+v).
 `scroll [direction=down|up]`: Scroll the page up or down. The [direction=down|up] should just be down or up. Example: scroll [down].

@@ -38,6 +38,14 @@ parser.add_argument("--dir",
                     type=str, 
                     required=True,
                     )
+parser.add_argument("--agent", 
+                    type=str, 
+                    required=True,
+                    )
+parser.add_argument("--start_port",
+                    type=int, 
+                    required=True,
+                    )
 args = parser.parse_args()
 
 dir = args.dir
@@ -77,10 +85,10 @@ def log_output(process, file_path, prefix):
             f.flush()
 
 def run_background_server(port):
-    actual_port = 8100 + int(port)
+    actual_port = args.start_port + int(port)
     clear_port(actual_port)
     
-    cmd = f"cd ~/altera/lyfe-agent && bazel-bin/main --agents=webb_{args.dir} --port {actual_port}"
+    cmd = f"cd ~/altera/lyfe-agent && bazel-bin/main --agents={args.agent} --port {actual_port}"
     logging.info(f"Starting background server: {cmd}")
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
     
@@ -99,7 +107,7 @@ def run_task(port):
         
         cmd = f"""
         cd ~/webarena
-        python -u run.py --dir {args.dir} --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
+        python -u run.py --dir {args.dir} --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {args.start_port + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
         """
         
         logging.info(f"Executing command for port {port}")
@@ -125,7 +133,52 @@ def run_task(port):
         return None
 
 def worker(task_type, port):
-    run_task(port)
+    return run_task(port)
+
+def terminate_server(server_process):
+    if server_process:
+        server_process.terminate()
+        try:
+            server_process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            server_process.kill()
+        logging.info(f"Terminated background server process")
+
+def run_docker_commands():
+    # commands = [
+    #     "docker stop shopping_admin forum gitlab shopping",
+    #     "docker rm shopping_admin forum gitlab shopping",
+    #     "docker run --name shopping -p 7770:80 -d shopping_final_0712",
+    #     "docker run --name shopping_admin -p 7780:80 -d shopping_admin_final_0719",
+    #     "docker run --name gitlab -d -p 8023:8023 gitlab-populated-final-port8023 /opt/gitlab/embedded/bin/runsvdir-start",
+    #     "docker run --name forum -p 9999:80 -d postmill-populated-exposed-withimg",
+    #     "docker start gitlab",
+    #     "docker start shopping",
+    #     "docker start shopping_admin",
+    #     "docker start forum",
+    #     "docker start kiwix33",
+    #     "cd /home/ubuntu/openstreetmap-website/ && docker compose start",
+    #     'docker exec shopping /var/www/magento2/bin/magento setup:store-config:set --base-url="http://${HOSTNAME}:7770"',
+    #     'docker exec shopping mysql -u magentouser -pMyPassword magentodb -e \'UPDATE core_config_data SET value="http://${HOSTNAME}:7770/" WHERE path = "web/secure/base_url";\'',
+    #     "docker exec shopping_admin php /var/www/magento2/bin/magento config:set admin/security/password_is_forced 0",
+    #     "docker exec shopping_admin php /var/www/magento2/bin/magento config:set admin/security/password_lifetime 0",
+    #     "docker exec shopping /var/www/magento2/bin/magento cache:flush",
+    #     'docker exec shopping_admin /var/www/magento2/bin/magento setup:store-config:set --base-url="http://${HOSTNAME}:7780"',
+    #     'docker exec shopping_admin mysql -u magentouser -pMyPassword magentodb -e \'UPDATE core_config_data SET value="http://${HOSTNAME}:7780/" WHERE path = "web/secure/base_url";\'',
+    #     "docker exec shopping_admin /var/www/magento2/bin/magento cache:flush",
+    #     'docker exec gitlab sed -i "s|^external_url.*|external_url \'http://${HOSTNAME}:8023\'|" /etc/gitlab/gitlab.rb',
+    #     "docker exec gitlab gitlab-ctl reconfigure"
+    #     "mkdir -p ./.auth",
+    #     "python browser_env/auto_login.py",
+    # ]
+    
+    # for cmd in commands:
+    #     try:
+    #         subprocess.run(cmd, shell=True, check=True)
+    #         logging.info(f"Successfully executed: {cmd}")
+    #     except subprocess.CalledProcessError as e:
+    #         logging.error(f"Error executing command: {cmd}")
+    #         logging.error(f"Error details: {str(e)}")
 
 if __name__ == '__main__':
     os.makedirs(f"run_outputs/{args.dir}", exist_ok=True)
@@ -137,8 +190,17 @@ if __name__ == '__main__':
 
     logging.info(f"Starting execution with up to 6 parallel tasks, one for each task type")
 
+    batch_count = 0
+
     while any(tasks for tasks in all_tasks.values()):
+        batch_count += 1
+        
+        if batch_count % 5 == 1:  # Run Docker commands at the start of every 5th batch
+            logging.info("Running Docker commands before starting the batch")
+            run_docker_commands()
+
         threads = []
+        server_processes = []
         for task_type, tasks in all_tasks.items():
             if tasks:
                 port = tasks.pop(0)
@@ -148,8 +210,16 @@ if __name__ == '__main__':
 
         # Wait for all threads in this batch to finish
         for t in threads:
-            t.join()
+            server_process = t.join()
+            if server_process:
+                server_processes.append(server_process)
 
-        logging.info(f"Completed a batch of tasks")
+        logging.info(f"Completed batch {batch_count} of tasks")
+
+        # Terminate all background servers for this batch
+        for server_process in server_processes:
+            terminate_server(server_process)
+
+        logging.info(f"Terminated all background servers for batch {batch_count}")
 
     logging.info("All tasks completed")

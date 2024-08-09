@@ -253,7 +253,7 @@ class AlteraAgent(Agent):
                 message.environment_information.structured_information.CopyFrom(web_struct)
                 message_bytes = message.SerializeToString()
                 await ws.send(message_bytes)
-                print("Message sent!")
+                print(f"Message sent!")
 
             async def receive_message(ws):
                 response = await ws.recv()

@@ -159,6 +159,7 @@ class StringEvaluator(Evaluator):
                                     pred=pred,
                                     tokenize=(len(value) == 1),
                                 )
+                                print(f"Potential: {potential} {include}")
                                 if include:
                                     score = include
                                     break
