@@ -23,6 +23,7 @@ os.environ['MAP'] = f"http://{hostname}:3000"
 os.environ['WIKIPEDIA'] = f"http://{hostname}:8888"
 os.environ['HOMEPAGE'] = f"http://{hostname}:4399"
 
+
 class TaskType(Enum):
     # SHOPPING = 'shopping'
     REDDIT = 'reddit'
@@ -144,7 +145,7 @@ def terminate_server(server_process):
             server_process.kill()
         logging.info(f"Terminated background server process")
 
-def run_docker_commands():
+# def run_docker_commands():
     # commands = [
     #     "docker stop shopping_admin forum gitlab shopping",
     #     "docker rm shopping_admin forum gitlab shopping",
@@ -195,9 +196,9 @@ if __name__ == '__main__':
     while any(tasks for tasks in all_tasks.values()):
         batch_count += 1
         
-        if batch_count % 5 == 1:  # Run Docker commands at the start of every 5th batch
-            logging.info("Running Docker commands before starting the batch")
-            run_docker_commands()
+        # if batch_count % 5 == 1:  # Run Docker commands at the start of every 5th batch
+        #     logging.info("Running Docker commands before starting the batch")
+        #     run_docker_commands()
 
         threads = []
         server_processes = []

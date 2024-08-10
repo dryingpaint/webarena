@@ -32,3 +32,5 @@
 /tmp/tmp_ub0s4pp/171.json,Tell me the full names of the repositories where I made contributions and they got less than 5 stars?,,22 s,N/A,FAIL,8/9 0:23
 /tmp/tmp_m4_w9kx/171.json,Tell me the full names of the repositories where I made contributions and they got less than 5 stars?,,71 s,"'The A11Y Project / a11yproject.com', 'Byte Blaze / accessible-html-content-patterns', 'Byte Blaze / empathy-prompts'",FAIL,8/9 0:24
 /tmp/tmpfsh4lelc/171.json,Tell me the full names of the repositories where I made contributions and they got less than 5 stars?,,124 s,The full name of the repository where contributions were made and received less than 5 stars is 'Byte Blaze / a11y-syntax-highlighting'.,FAIL,8/9 0:36
+/tmp/tmpvqm7zzrc/0.json,What is the top-1 best-selling product in 2022,,2 s,The top-1 best-selling product in 2022 is the 'Sprite Stasis Ball 65 cm' with a quantity of 6,PASS,8/10 23:35
+/tmp/tmpp94oyrbf/0.json,What is the top-1 best-selling product in 2022,,2 s,The top-1 best-selling product in 2022 is 'Sprite Stasis Ball 65 cm' with a quantity of 6 units sold.,PASS,8/10 23:43
