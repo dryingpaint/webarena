@@ -11,7 +11,7 @@ import threading
 import csv
 import math
 
-hostname = 'ec2-3-145-147-254.us-east-2.compute.amazonaws.com'
+hostname = 'ec2-3-144-235-9.us-east-2.compute.amazonaws.com' 
 os.environ['HOSTNAME'] = hostname
 
 os.environ['SHOPPING'] = f"http://{hostname}:7770"
@@ -21,6 +21,7 @@ os.environ['GITLAB'] = f"http://{hostname}:8023"
 os.environ['MAP'] = f"http://{hostname}:3000"
 os.environ['WIKIPEDIA'] = f"http://{hostname}:8888"
 os.environ['HOMEPAGE'] = f"http://{hostname}:4399"
+os.environ['OPENAI_API_KEY'] = 'sk-proj-f4PLKM1j5USHLSkt9TgsT3BlbkFJ9YCOhryOzgnaJigWq0wx'
 
 class TaskType(Enum):
     SHOPPING = 'shopping'
@@ -56,7 +57,7 @@ assert args.type in files_by_task
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 num_cores = multiprocessing.cpu_count()
 # Set max_parallel to 1.5 times the number of cores
-max_parallel = int(10)
+max_parallel = int(num_cores * 1.5)
 
 def clear_port(port):
     try:
@@ -126,38 +127,29 @@ def run_task(port):
     except Exception as e:
         logging.error(f"Unexpected error for port {port}: {str(e)}")
 
-def worker(task_range):
-    for port in task_range:
-        run_task(port)
+def run_batch(batch):
+    pool = multiprocessing.Pool(processes=len(batch))
+    pool.map(run_task, batch)
+    pool.close()
+    pool.join()
 
 if __name__ == '__main__':
-    assert args.type in files_by_task
-    
-    site_tasks = [int(file.replace('.json','')) for file in files_by_task[args.type]]
-    site_tasks = sorted(site_tasks)
+    site_tasks = [file.replace('.json','') for file in files_by_task[args.type]]
     
     os.makedirs(f"run_outputs/{args.type}", exist_ok=True)
     
     total_tasks = len(site_tasks)
+    num_batches = math.ceil(total_tasks / max_parallel)
     
-    logging.info(f"Starting execution with {total_tasks} tasks using {max_parallel} parallel threads")
+    logging.info(f"Starting execution with {total_tasks} tasks in {num_batches} batches")
     
-    # Calculate the number of tasks per thread
-    tasks_per_thread = math.ceil(total_tasks / max_parallel)
-    
-    threads = []
-    for i in range(max_parallel):
-        start_idx = i * tasks_per_thread
-        end_idx = min((i + 1) * tasks_per_thread, total_tasks)
-        task_range = site_tasks[start_idx:end_idx]
+    for i in range(num_batches):
+        start_idx = i * max_parallel
+        end_idx = min((i + 1) * max_parallel, total_tasks)
+        current_batch = site_tasks[start_idx:end_idx]
         
-        if task_range:  # Only create a thread if there are tasks to process
-            t = threading.Thread(target=worker, args=(task_range,))
-            t.start()
-            threads.append(t)
-    
-    # Wait for all threads to finish
-    for t in threads:
-        t.join()
+        logging.info(f"Running batch {i+1}/{num_batches} with {len(current_batch)} tasks")
+        run_batch(current_batch)
+        logging.info(f"Completed batch {i+1}/{num_batches}")
     
     logging.info("All tasks completed")
