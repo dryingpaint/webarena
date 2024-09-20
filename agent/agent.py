@@ -27,13 +27,11 @@ from llms import (
 from llms.tokenizers import Tokenizer
 from websockets.sync.client import connect
 import websockets
-from websocket import create_connection
 from protos.altera_agents import observations_pb2, actions_pb2
 from google.protobuf.struct_pb2 import Struct
 
 import nest_asyncio
 nest_asyncio.apply()
-
 
 
 class Agent:
@@ -178,7 +176,7 @@ class AlteraAgent(Agent):
     ) -> None:
         super().__init__()
         self.game_env = game_env
-        self.action_space = action_space
+        self.action_space = str(action_space)
         self.action_set_tag = "id_accessibility_tree"
         self.port = f"ws://localhost:{port}"
 
@@ -244,11 +242,11 @@ class AlteraAgent(Agent):
                 message.observation_type = observations_pb2.AGENT_OBSERVATION_ENVIRONMENT_INFORMATION
                 web_struct = Struct()
                 web_struct.update({
-                    'url': url,
+                    'env': "web",
                     'actionSpace': self.action_space,
-                    'gameEnv': self.game_env,
-                    'intention': intent,
-                    'websiteTree': web_tree,
+                    'envDetails': self.game_env,
+                    'intent': intent,
+                    'gameState': f"url: {url}\nweb tree: {web_tree}",
                 })
                 message.environment_information.structured_information.CopyFrom(web_struct)
                 message_bytes = message.SerializeToString()
@@ -343,7 +341,7 @@ def construct_agent(args: argparse.Namespace) -> Agent:
         try:
             with open(args.instruction_path) as f:
                 file = json.load(f)
-                game_env = file['game_env']
+                game_env = file['env_details']
                 action_space = file['action_space']
             agent = AlteraAgent(game_env, action_space, args.port)
         except:

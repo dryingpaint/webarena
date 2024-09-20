@@ -83,7 +83,7 @@ def run_background_server(port):
     actual_port = 8100 + int(port)
     clear_port(actual_port)
     
-    cmd = f"cd ~/altera/lyfe-agent && bazel-bin/main --agents=webb --port {actual_port}"
+    cmd = f"cd ~/altera/lyfe-agent && bazel-bin/main --agents=webb --websocket_port {actual_port}"
     logging.info(f"Starting background server: {cmd}")
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
     
@@ -102,7 +102,7 @@ def run_task(port):
         
         cmd = f"""
         cd ~/webarena
-        python -u run.py --agent_type altera --instruction_path agent/prompts/jsons/altera.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
+        python -u run.py --agent_type altera --instruction_path agent/prompts/jsons/config.json --port {8100 + int(port)} --test_start_idx {port} --test_end_idx {int(port) + 1}
         """
         
         logging.info(f"Executing command for port {port}")

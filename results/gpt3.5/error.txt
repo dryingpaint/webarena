@@ -1,0 +1,56 @@
+[Config file]: /tmp/tmprcu885jh/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 294, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmp14imauwj/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 294, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpil1mwxxi/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 295, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpsbpoorq9/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 295, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpeawznczg/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 295, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpw3y71flv/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 296, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmpsx1v7k98/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 296, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'
+[Config file]: /tmp/tmphyrcol7p/0.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 296, in test
+    agent.reset(config_file)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset'

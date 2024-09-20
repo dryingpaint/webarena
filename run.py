@@ -248,6 +248,7 @@ def test(
 
     results = {}
     for config_file in config_file_list:
+        print(f"FILE: {config_file}")
         try:
             render_helper = RenderHelper(
                 config_file, args.result_dir, args.action_set_tag
@@ -280,7 +281,7 @@ def test(
                     )
                     _c["storage_state"] = f"{temp_dir}/{cookie_file_name}"
                     assert os.path.exists(_c["storage_state"])
-                    # update the config file
+                # update the config/ca file
                     config_file = f"{temp_dir}/{os.path.basename(config_file)}"
                     with open(config_file, "w") as f:
                         json.dump(_c, f)
@@ -291,6 +292,7 @@ def test(
             results[config_file]['intent'] = intent
             none_actions = ''
 
+            print(f"AGENT: {agent}")
             agent.reset(config_file)
             trajectory: Trajectory = []
             obs, info = env.reset(options={"config_file": config_file})
@@ -356,18 +358,6 @@ def test(
             scores.append(score)
 
             elapsed = int(time.time()-start_task)
-
-            results[config_file]['none_actions'] = none_actions
-            results[config_file]['elapsed'] = f"{elapsed} s"
-            results[config_file]['answer'] = trajectory[-1]['answer'] if len(trajectory) > 0 and 'answer' in trajectory[-1] else "No answer"
-            results[config_file]['outcome'] = f"PASS" if score == 1 else "FAIL"
-            date = datetime.datetime.now()
-            results[config_file]['time'] = f'{date.month}/{date.day} {date.hour}:{date.minute}'
-
-            with open(f"results_{args.dir}.csv", "a", newline="") as f:
-                w = csv.DictWriter(f, results[config_file].keys())
-                w.writerow(results[config_file])
-
             if score == 1:
                 logger.info(f"[Result] (PASS) {config_file} after {elapsed} s")
             else:
