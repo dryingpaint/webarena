@@ -292,7 +292,6 @@ def test(
             results[config_file]['intent'] = intent
             none_actions = ''
 
-            print(f"AGENT: {agent}")
             agent.reset(config_file)
             trajectory: Trajectory = []
             obs, info = env.reset(options={"config_file": config_file})
@@ -318,6 +317,7 @@ def test(
                             none_actions += action['raw_prediction']
                     except ValueError as e:
                         # get the error message
+                        print(f"ERROR: {e}")
                         action = create_stop_action(f"ERROR: {str(e)}")
 
                 trajectory.append(action)
@@ -334,6 +334,7 @@ def test(
                 meta_data["action_history"].append(action_str)
 
                 if action["action_type"] == ActionTypes.STOP:
+                    print(f"STOP ACTION")
                     break
 
                 start = time.time()
@@ -344,6 +345,7 @@ def test(
 
                 if terminated:
                     # add a action place holder
+                    print(f"TERMINATED: {state_info}")
                     trajectory.append(create_stop_action(""))
                     break
 

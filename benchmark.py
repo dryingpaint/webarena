@@ -97,7 +97,6 @@ def run_task(port):
     
     try:
         server_process = run_background_server(port)
-        
         time.sleep(5)  # Adjust as needed
         
         cmd = f"""

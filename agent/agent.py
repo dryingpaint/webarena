@@ -6,6 +6,7 @@ import asyncio
 import tiktoken
 import time 
 from beartype import beartype
+import ast
 
 from agent.prompts import *
 from browser_env import Trajectory
@@ -146,6 +147,7 @@ class PromptAgent(Agent):
                 )
                 if self.action_set_tag == "id_accessibility_tree":
                     action = create_id_based_action(parsed_response)
+
                 elif self.action_set_tag == "playwright":
                     action = create_playwright_action(parsed_response)
                 else:
@@ -183,29 +185,6 @@ class AlteraAgent(Agent):
     def set_action_set_tag(self, tag: str) -> None:
         self.action_set_tag = tag
 
-    def extract_action(self, raw_response: str):
-        # pattern = rf"```((.|\n)*?)```"
-        # match = re.search(pattern, response)
-        # if match:
-        #     return match.group(1).strip()
-        # else:
-        #     raise ActionParsingError(
-        #         f'Cannot find the answer phrase "{self.answer_phrase}" in "{response}"'
-        #     )
-        response = raw_response.split(" ")
-        out = response[0]
-        if out == 'stop' or out == 'type':
-            return raw_response
-        if len(response) > 1:
-            for param in response[1:]:
-                if "[" not in param:
-                    out += f"[{param}]"
-                else:
-                    out += param
-            return out
-        else:
-            return response[0]
-
     @beartype
     def next_action(
         self, trajectory: Trajectory, intent: str, meta_data: dict[str, Any]
@@ -215,12 +194,6 @@ class AlteraAgent(Agent):
         page = state_info["info"]["page"]
         url = page.url
         web_tree = state_info["observation"]["text"]
-        
-        async def handle_send():
-            pass
-        
-        async def handle_receive():
-            pass
 
         MAX_RETRIES = 10
         RETRY_DELAY = 1
@@ -245,8 +218,8 @@ class AlteraAgent(Agent):
                     'env': "web",
                     'actionSpace': self.action_space,
                     'envDetails': self.game_env,
-                    'intent': intent,
-                    'gameState': f"url: {url}\nweb tree: {web_tree}",
+                    'goal': intent,
+                    'gameState': f"url: {url}\nweb tree: {web_tree}\n\nYOUR CURRENT TASK: {intent}",
                 })
                 message.environment_information.structured_information.CopyFrom(web_struct)
                 message_bytes = message.SerializeToString()
@@ -260,7 +233,14 @@ class AlteraAgent(Agent):
 
                 if response_message.action_type == actions_pb2.AGENT_ACTION_PERFORM_SKILL:
                     action_response = response_message.perform_skill.message
-                    return action_response
+                    print(action_response)
+                    action_response = ast.literal_eval(action_response)
+                    action_str = f"{action_response['skill']}"
+                    params = [str(val) for param, val in action_response['params'].items()]
+                    action_params = "["+"][".join(params)+"]" if params else ""
+                    action_str = action_str+action_params
+                    print(action_str)
+                    return action_str
                 return None
 
             ws = None
@@ -294,15 +274,12 @@ class AlteraAgent(Agent):
             #     await asyncio.sleep(0.005)
 
         response = asyncio.get_event_loop().run_until_complete(async_next_action())
-        n = 0
         try:
-            parsed_response = self.extract_action(
-                response
-            )
             if self.action_set_tag == "id_accessibility_tree":
-                action = create_id_based_action(parsed_response)
+                action = create_id_based_action(response)
+                print(f"PARSED ACTION: {action}")
             elif self.action_set_tag == "playwright":
-                action = create_playwright_action(parsed_response)
+                action = create_playwright_action(response)
             else:
                 raise ValueError(
                     f"Unknown action type {self.action_set_tag}"
