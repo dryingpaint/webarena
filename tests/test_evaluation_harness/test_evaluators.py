@@ -6,16 +6,15 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from beartype import beartype
 from py import test
 
 from agent import Agent, TeacherForcingAgent
 from browser_env import ActionTypes, ScriptBrowserEnv
 from browser_env.env_config import *
 from evaluation_harness import (
-    HTMLContentExactEvaluator,
+    HTMLContentEvaluator,
     StringEvaluator,
-    URLExactEvaluator,
+    URLEvaluator,
 )
 from evaluation_harness.evaluators import EvaluatorComb
 
@@ -100,7 +99,7 @@ def test_url_exact_match_success(script_browser_env: ScriptBrowserEnv) -> None:
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = URLExactEvaluator()
+    evalutor = URLEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -120,7 +119,7 @@ def test_url_exact_match_fail(script_browser_env: ScriptBrowserEnv) -> None:
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = URLExactEvaluator()
+    evalutor = URLEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -144,7 +143,7 @@ def test_html_content_match_success(
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -165,7 +164,7 @@ def test_html_content_match_fail(script_browser_env: ScriptBrowserEnv) -> None:
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -190,7 +189,7 @@ def test_html_content_element_match_success(
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -215,7 +214,7 @@ def test_html_content_element_match_fail(
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
@@ -240,16 +239,13 @@ def test_html_content_url_comb_success(
 
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evaluators = EvaluatorComb(
-        [URLExactEvaluator(), HTMLContentExactEvaluator()]
-    )
+    evaluators = EvaluatorComb([URLEvaluator(), HTMLContentEvaluator()])
     score = evaluators(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
     assert score == 1.0
 
 
-@beartype
 @pytest.mark.skipif(
     IN_GITHUB_ACTIONS, reason="Won't work using the demo sites"
 )
@@ -266,14 +262,13 @@ def test_func_success(
     env = script_browser_env
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
     assert score == 1.0
 
 
-@beartype
 @pytest.mark.skipif(
     IN_GITHUB_ACTIONS, reason="Won't work using the demo sites"
 )
@@ -290,14 +285,13 @@ def test_func_fail(
     env = script_browser_env
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
     assert score == 0.0
 
 
-@beartype
 def test_func_url_func_last_success(
     script_browser_env: ScriptBrowserEnv,
 ) -> None:
@@ -312,14 +306,13 @@ def test_func_url_func_last_success(
     env = script_browser_env
     trajectory = tf_roll_out(agent, env, config_file)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, config_file, env.page, env.get_page_client(env.page)
     )
     assert score == 1.0
 
 
-@beartype
 def test_func_url_func_page_success(
     script_browser_env: ScriptBrowserEnv,
 ) -> None:
@@ -346,7 +339,7 @@ def test_func_url_func_page_success(
     env = script_browser_env
     trajectory = tf_roll_out(agent, env, tmp_config)
 
-    evalutor = HTMLContentExactEvaluator()
+    evalutor = HTMLContentEvaluator()
     score = evalutor(
         trajectory, tmp_config, env.page, env.get_page_client(env.page)
     )

@@ -1,0 +1,46 @@
+config_files/57.json,Tell me the closest restaurant(s) to university center at Carnegie Mellon University,,173 s,Early stop: Reach max steps 30,FAIL,8/6 22:40
+/tmp/tmpmrvxiera/107.json,Presents the monthly count of successful orders from May to December 2022 in MM:COUNT format,,20 s,N/A,FAIL,8/6 22:41
+config_files/58.json,Tell me the closest cafe(s) to CMU Hunt library,,38 s,No results found,FAIL,8/6 22:41
+/tmp/tmpn62v37rl/178.json,Open my latest created issue that has better in its title to check if it is closed,,169 s,Early stop: Reach max steps 30,FAIL,8/6 22:43
+/tmp/tmprhx_a8uy/108.json,Presents the monthly count of successful orders 01/2023-05/2023 in MM:COUNT format,,46 s,"01/2023:0, 02/2023:0, 03/2023:0, 04/2023:0, 05/2023:0",FAIL,8/6 22:45
+config_files/59.json,Tell me the closest restaurant(s) to CMU Hunt library,,76 s,"The search results indicate 'No results found,' so I cannot complete the task with the given information.",FAIL,8/6 22:45
+config_files/60.json,Tell me the closest restaurant(s) to CMU Posner Hall,,98 s,Early stop: Same typing action for 5 times,FAIL,8/6 22:47
+/tmp/tmpoxe_dxbp/109.json,Presents the monthly count of successful orders from Jan to December 2022 in MM:COUNT format,,360 s,"January: 25, February: 30, March: 28, April: 32, May: 29, June: 27, July: 31, August: 33, September: 26, October: 30, November: 28, December: 35",FAIL,8/6 22:51
+config_files/61.json,Tell me the closest restaurant(s) to CMU Sorrells Library,,47 s,N/A,FAIL,8/6 22:52
+/tmp/tmpjhwkqyhr/110.json,Presents the monthly count of successful orders from Jan to Nov 2022 in MM:COUNT format,,71 s,"Jan 2022: 10, Feb 2022: 15, Mar 2022: 20, Nov 2022: 25",FAIL,8/6 22:53
+config_files/70.json,What is the zip code of Carnegie Mellon University?,,2 s,15213,PASS,8/6 22:53
+/tmp/tmpgj1h7ro6/111.json,Presents the monthly count of successful orders from Feb to Nov 2022 in MM:COUNT format,click [Search],201 s,"Feb 2022: 120 orders, Mar 2022: 135 orders, Apr 2022: 150 orders, May 2022: 165 orders, Jun 2022: 180 orders, Jul 2022: 195 orders, Aug 2022: 210 orders, Sep 2022: 225 orders, Oct 2022: 240 orders, Nov 2022: 255 orders",FAIL,8/6 22:57
+config_files/71.json,What is the zip code of Chatham University?,,71 s,The zip code of Chatham University is 15232 for the North Woodland Road location and 15208 for the Fifth Avenue location.,PASS,8/6 22:58
+/tmp/tmpn0gsm5t8/112.json,Show me the customers who have expressed dissatisfaction with Circe fleece?,,304 s,Early stop: Reach max steps 30,FAIL,8/6 23:2
+/tmp/tmpfahriwwp/294.json,Show me the command to clone ChatGPT with SSH.,,29 s,"To clone ChatGPT with SSH, use the following command: git clone git@github.com:openai/chatgpt.git",FAIL,8/6 23:6
+config_files/80.json,"What is the duration required to first walk from Carnegie Mellon University to Starbucks on Craig Street, and then drive to Pittsburgh International Airport?",,66 s,The total duration required to first walk from Carnegie Mellon University to Starbucks on Craig Street (500m) and then drive to Pittsburgh International Airport (10m) is 1 minute.,FAIL,8/6 23:7
+/tmp/tmp6u9zqqep/595.json,"Open the thread of a trending post on the forum ""space"" and subscribe.",click [trending_post_link]click [subscribe_button]click [thread_link],94 s,Early stop: Failed to parse actions for 3 times,FAIL,8/6 23:7
+/tmp/tmpc0d3y7qf/120.json,Tell me the reasons why customers like Ana Running Short,,201 s,"Customers like Ana Running Short because the product is enabled for purchase, has a unique SKU, has a competitive price, and has sufficient quantity available.",FAIL,8/6 23:9
+/tmp/tmpzhw48m00/121.json,Tell me the reasons why customers like Circe hooded fleece,,103 s,"Customers like Circe hooded fleece for its comfortable fit, stylish design, and high-quality material that provides warmth and durability.",FAIL,8/6 23:11
+config_files/81.json,"What is the duration required to first walk from Univ of Pittsburgh to starbucks on Craig Street, and then drive to Pittsburgh International Airport?",,182 s,Early stop: Reach max steps 30,FAIL,8/6 23:12
+/tmp/tmpkb9ajc8x/596.json,"Open the thread of a trending post on the forum ""books"" and subscribe.",,204 s,Early stop: Reach max steps 30,FAIL,8/6 23:13
+/tmp/tmpp6hb8y1j/122.json,Tell me the reasons why customers like Olivia zip jacket,,54 s,"Customers like Olivia zip jacket because it is stylish, comfortable, and versatile.",FAIL,8/6 23:14
+config_files/82.json,"What is the duration required to first walk from Massachusetts Institute of Technology to Harvard University, and then drive to Boston Logan International Airport?",,101 s,N/A,FAIL,8/6 23:15
+/tmp/tmpylxv2980/597.json,"Open the thread of a trending post on the forum ""consoles"" and subscribe.",N/A,225 s,Early stop: Reach max steps 30,FAIL,8/6 23:17
+/tmp/tmpe8lr6wn2/297.json,Show me the command to clone the most stared Covid location tracker with SSH.,,31 s,N/A,FAIL,8/6 23:18
+/tmp/tmpbbqhrg29/123.json,Tell me the reasons why customers like Circe's products,,60 s,"The reasons why customers like Circe's products are: they offer a variety of options, have a user-friendly interface, provide excellent customer service, and offer competitive pricing.",FAIL,8/6 23:18
+/tmp/tmpt5pmmlnp/598.json,"Open the thread of a trending post on the forum ""pittsburgh"" and subscribe.",,107 s,N/A,FAIL,8/6 23:19
+config_files/83.json,"What is the duration required to first walk from Carnegie Mellon University to apple store shadyside, and then drive to starbucks on craig street?",read [911],192 s,Early stop: Reach max steps 30,FAIL,8/6 23:20
+config_files/84.json,"From my stay at DoubleTree by Hilton New York Downtown, what's the estimated driving time to reach Keens Steakhouse?",,23 s,The estimated driving time from DoubleTree by Hilton New York Downtown to Keens Steakhouse is 14 minutes for a distance of 6.1km.,PASS,8/6 23:21
+/tmp/tmpvnz2qlnj/599.json,"Open the thread of a trending post on the forum ""machine learning"" and subscribe.",,232 s,Early stop: Reach max steps 30,FAIL,8/6 23:25
+/tmp/tmp3rkh2ta0/127.json,What brands appear most frequently among the top search terms?,,243 s,"The brands that appear most frequently among the top search terms related to the Green Bay Packers are Sports Illustrated, Packers Wire, and Cleveland Browns.",FAIL,8/6 23:25
+config_files/85.json,"From my stay at La Quinta Inn near the airport, what's the estimated driving time to reach Carnegie Mellon University?",,45 s,The estimated driving time from La Quinta Inn near the airport to Carnegie Mellon University is not available yet. Please wait for the directions and estimated driving time to load.,FAIL,8/6 23:26
+/tmp/tmpkgl0a0lh/600.json,"Post my question, ""what is the recommended console to buy these days"", in a subreddit where I'm likely to get an answer",,204 s,Early stop: Reach max steps 30,FAIL,8/6 23:29
+/tmp/tmpc8npuiph/128.json,What's the total number of items sold in the most recent 2 orders?,,357 s,Early stop: Reach max steps 30,FAIL,8/6 23:31
+/tmp/tmpr343k7qf/305.json,How many commits did Philip make in 2023/1?,,162 s,Early stop: Reach max steps 30,FAIL,8/6 23:34
+config_files/86.json,"From my stay at La Quinta Inn near the airport, what's the estimated driving time to reach Upitt?",,185 s,Early stop: Reach max steps 30,FAIL,8/6 23:35
+/tmp/tmp7ryalbxt/601.json,"Post my question, ""is car necessary in NYC"", in a subreddit where I'm likely to get an answer",,204 s,Early stop: Reach max steps 30,FAIL,8/6 23:35
+/tmp/tmpgdiix9s7/129.json,What's the total number of items sold in the most recent 4 orders?,click [button1],363 s,Early stop: Reach max steps 30,FAIL,8/6 23:38
+config_files/87.json,"From my stay at red roof inn, what's the estimated driving time to reach Pittsburgh science museum?",,37 s,6 hours and 54 minutes,FAIL,8/6 23:39
+/tmp/tmpxt6o5lca/602.json,"Post my question, ""places for new drivers to learn driving in pittsburgh"", in a subreddit where I'm likely to get an answer",,34 s,You cannot post more. Wait a while before trying again.,FAIL,8/6 23:39
+/tmp/tmps6hyp875/306.json,How many commits did Anthony make between 08/2022-09/2022?,,46 s,N/A,FAIL,8/6 23:39
+/tmp/tmp0utz6z7k/130.json,What's the total number of items sold in the most recent 5 orders?,,76 s,25,FAIL,8/6 23:39
+config_files/88.json,"From my stay at Homewood Suites Southpointe, what's the estimated driving time to reach PPG Paints Arena?",,29 s,"The estimated driving time to reach PPG Paints Arena from Homewood Suites Southpointe is 34 minutes, as indicated by the static text with ID [923].",PASS,8/6 23:40
+/tmp/tmp0gettdzy/307.json,How many commits did Nic make in April 2021?,,47 s,0,FAIL,8/6 23:41
+/tmp/tmpahja0fnk/603.json,"Post my question, ""safe and budge apartment to live in nyc"", in a subreddit where I'm likely to get an answer",,67 s,You cannot post more. Wait a while before trying again.,FAIL,8/6 23:41
+/tmp/tmpwv3qi587/131.json,What's the total number of items sold in the most recent 7 orders?,,420 s,Early stop: Reach max steps 30,FAIL,8/6 23:47

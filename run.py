@@ -5,17 +5,22 @@ import json
 import logging
 import os
 import random
+import subprocess
+import tempfile
 import time
 from pathlib import Path
+import csv
+import datetime
 
+from protos.altera_agents import observations_pb2, actions_pb2
 import openai
-from beartype import beartype
 
 from agent import (
     Agent,
     PromptAgent,
     TeacherForcingAgent,
     construct_agent,
+    AlteraAgent,
 )
 from agent.prompts import *
 from browser_env import (
@@ -27,6 +32,7 @@ from browser_env import (
     create_stop_action,
 )
 from browser_env.actions import is_equivalent
+from browser_env.auto_login import get_site_comb_from_filepath
 from browser_env.helper_functions import (
     RenderHelper,
     get_action_description,
@@ -89,7 +95,8 @@ def config() -> argparse.Namespace:
     parser.add_argument("--max_steps", type=int, default=30)
 
     # agent config
-    parser.add_argument("--agent_type", type=str, default="prompt")
+    parser.add_argument("--agent_type", type=str, default="altera")
+    parser.add_argument("--port", type=int, default=8100)
     parser.add_argument(
         "--instruction_path",
         type=str,
@@ -105,7 +112,7 @@ def config() -> argparse.Namespace:
         "--repeating_action_failure_th",
         help="When concesecutive repeating action exceeds this threshold, the agent will stop",
         type=int,
-        default=3,
+        default=5,
     )
 
     # lm config
@@ -118,15 +125,28 @@ def config() -> argparse.Namespace:
     parser.add_argument("--max_tokens", type=int, default=384)
     parser.add_argument("--stop_token", type=str, default=None)
     parser.add_argument(
+        "--max_retry",
+        type=int,
+        help="max retry times to perform generations when parsing fails",
+        default=1,
+    )
+    parser.add_argument(
         "--max_obs_length",
         type=int,
         help="when not zero, will truncate the observation to this length before feeding to the model",
         default=1920,
     )
+    parser.add_argument(
+        "--model_endpoint",
+        help="huggingface model endpoint",
+        type=str,
+        default="",
+    )
 
     # example config
     parser.add_argument("--test_start_idx", type=int, default=0)
     parser.add_argument("--test_end_idx", type=int, default=1000)
+    parser.add_argument("--dir", type=str, default="")
 
     # logging related
     parser.add_argument("--result_dir", type=str, default="")
@@ -144,7 +164,6 @@ def config() -> argparse.Namespace:
     return args
 
 
-@beartype
 def early_stop(
     trajectory: Trajectory, max_steps: int, thresholds: dict[str, int]
 ) -> tuple[bool, str]:
@@ -201,10 +220,9 @@ def early_stop(
     return False, ""
 
 
-@beartype
 def test(
     args: argparse.Namespace,
-    agent: Agent | PromptAgent | TeacherForcingAgent,
+    agent: Agent | PromptAgent | TeacherForcingAgent | AlteraAgent,
     config_file_list: list[str],
 ) -> None:
     scores = []
@@ -228,7 +246,9 @@ def test(
         sleep_after_execution=args.sleep_after_execution,
     )
 
+    results = {}
     for config_file in config_file_list:
+        print(f"FILE: {config_file}")
         try:
             render_helper = RenderHelper(
                 config_file, args.result_dir, args.action_set_tag
@@ -236,12 +256,41 @@ def test(
 
             # get intent
             with open(config_file) as f:
-                _c = json.load(f)
+                try:
+                    _c = json.load(f)
+                except:
+                    print(f"Failed to load file: {config_file}")
+                    continue
                 intent = _c["intent"]
                 task_id = _c["task_id"]
+                # automatically login
+                if _c["storage_state"]:
+                    cookie_file_name = os.path.basename(_c["storage_state"])
+                    comb = get_site_comb_from_filepath(cookie_file_name)
+                    temp_dir = tempfile.mkdtemp()
+                    # subprocess to renew the cookie
+                    subprocess.run(
+                        [
+                            "python",
+                            "browser_env/auto_login.py",
+                            "--auth_folder",
+                            temp_dir,
+                            "--site_list",
+                            *comb,
+                        ]
+                    )
+                    _c["storage_state"] = f"{temp_dir}/{cookie_file_name}"
+                    assert os.path.exists(_c["storage_state"])
+                # update the config/ca file
+                    config_file = f"{temp_dir}/{os.path.basename(config_file)}"
+                    with open(config_file, "w") as f:
+                        json.dump(_c, f)
 
+            results[config_file] = {'config_file': config_file}
             logger.info(f"[Config file]: {config_file}")
             logger.info(f"[Intent]: {intent}")
+            results[config_file]['intent'] = intent
+            none_actions = ''
 
             agent.reset(config_file)
             trajectory: Trajectory = []
@@ -250,20 +299,25 @@ def test(
             trajectory.append(state_info)
 
             meta_data = {"action_history": ["None"]}
+            start_task = time.time()
             while True:
                 early_stop_flag, stop_info = early_stop(
                     trajectory, max_steps, early_stop_thresholds
                 )
 
                 if early_stop_flag:
+                    print(f"STOPPING EARLY BECAUSE {stop_info}")
                     action = create_stop_action(f"Early stop: {stop_info}")
                 else:
                     try:
                         action = agent.next_action(
                             trajectory, intent, meta_data=meta_data
                         )
+                        if action['action_type'] == ActionTypes.NONE:
+                            none_actions += action['raw_prediction']
                     except ValueError as e:
                         # get the error message
+                        print(f"ERROR: {e}")
                         action = create_stop_action(f"ERROR: {str(e)}")
 
                 trajectory.append(action)
@@ -272,9 +326,7 @@ def test(
                     action,
                     state_info["info"]["observation_metadata"],
                     action_set_tag=args.action_set_tag,
-                    prompt_constructor=agent.prompt_constructor
-                    if isinstance(agent, PromptAgent)
-                    else None,
+                    prompt_constructor=agent.prompt_constructor if isinstance(agent, PromptAgent) else None
                 )
                 render_helper.render(
                     action, state_info, meta_data, args.render_screenshot
@@ -282,14 +334,18 @@ def test(
                 meta_data["action_history"].append(action_str)
 
                 if action["action_type"] == ActionTypes.STOP:
+                    print(f"STOP ACTION")
                     break
 
+                start = time.time()
                 obs, _, terminated, _, info = env.step(action)
+                print(f"Finished step in {int(time.time()-start)} s")
                 state_info = {"observation": obs, "info": info}
                 trajectory.append(state_info)
 
                 if terminated:
                     # add a action place holder
+                    print(f"TERMINATED: {state_info}")
                     trajectory.append(create_stop_action(""))
                     break
 
@@ -303,10 +359,11 @@ def test(
 
             scores.append(score)
 
+            elapsed = int(time.time()-start_task)
             if score == 1:
-                logger.info(f"[Result] (PASS) {config_file}")
+                logger.info(f"[Result] (PASS) {config_file} after {elapsed} s")
             else:
-                logger.info(f"[Result] (FAIL) {config_file}")
+                logger.info(f"[Result] (FAIL) {config_file} after {elapsed} s")
 
             if args.save_trace_enabled:
                 env.save_trace(
@@ -369,7 +426,6 @@ def get_unfinished(config_files: list[str], result_dir: str) -> list[str]:
     return unfinished_configs
 
 
-@beartype
 def dump_config(args: argparse.Namespace) -> None:
     config_file = Path(args.result_dir) / "config.json"
     if not config_file.exists():
@@ -380,7 +436,7 @@ def dump_config(args: argparse.Namespace) -> None:
 
 if __name__ == "__main__":
     args = config()
-    args.sleep_after_execution = 2.5
+    args.sleep_after_execution = 2.0
     prepare(args)
 
     test_file_list = []
@@ -388,14 +444,19 @@ if __name__ == "__main__":
     ed_idx = args.test_end_idx
     for i in range(st_idx, ed_idx):
         test_file_list.append(f"config_files/{i}.json")
-    test_file_list = get_unfinished(test_file_list, args.result_dir)
-    print(f"Total {len(test_file_list)} tasks left")
-    args.render = True
-    args.render_screenshot = True
-    args.save_trace_enabled = True
+    if "debug" not in args.result_dir:
+        test_file_list = get_unfinished(test_file_list, args.result_dir)
 
-    args.current_viewport_only = True
-    dump_config(args)
+    if len(test_file_list) == 0:
+        logger.info("No task left to run")
+    else:
+        print(f"Total {len(test_file_list)} tasks left")
+        args.render = False
+        args.render_screenshot = True
+        args.save_trace_enabled = True
 
-    agent = construct_agent(args)
-    test(args, agent, test_file_list)
+        args.current_viewport_only = True
+        dump_config(args)
+
+        agent = construct_agent(args)
+        test(args, agent, test_file_list)

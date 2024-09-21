@@ -16,16 +16,20 @@
 
 <p align="center">
 <a href="https://webarena.dev/">Website</a> •
-<a href="https://arxiv.org/2307.13854">Paper</a>
+<a href="https://arxiv.org/abs/2307.13854">Paper</a> •
+<a href="https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit?usp=sharing">Leaderboard</a>
 </p>
 
 ![Overview](media/overview.png)
 
-## Roadmap
-- [ ] In-house end-to-end evaluation. We are working on an API that accepts predicted actions from any interface and then returns the subsequent observation.
-- [ ] Support more agents with different prompting mechanisms such as [ASH](https://arxiv.org/pdf/2305.14257.pdf).
 
 ## News
+* [12/21/2023] We release the recording of trajectories performed by human annotators on ~170 tasks. Check out the [resource page](./resources/README.md#12212023-human-trajectories) for more details.
+* [11/3/2023] Multiple features!
+  * Uploaded newest [execution trajectories](./resources/README.md#1132023-execution-traces-from-our-experiments-v2)
+  * Added [Amazon Machine Image](./environment_docker/README.md#pre-installed-amazon-machine-image) that pre-installed all websites so that you don't have to!
+  * [Zeno](https://zenoml.com/) x WebArena which allows you to analyze your agents on WebArena without pain. Check out this [notebook](./scripts/webarena-zeno.ipynb) to upload your own data to Zeno, and [this](https://hub.zenoml.com/project/9db3e1cf-6e28-4cfc-aeec-1670cac01872/WebArena%20Tester/explore?params=eyJtb2RlbCI6ImdwdDM1LWRpcmVjdCIsIm1ldHJpYyI6eyJpZCI6NzQ5MiwibmFtZSI6InN1Y2Nlc3MiLCJ0eXBlIjoibWVhbiIsImNvbHVtbnMiOlsic3VjY2VzcyJdfSwiY29tcGFyaXNvbk1vZGVsIjoiZ3B0NC1jb3QiLCJjb21wYXJpc29uQ29sdW1uIjp7ImlkIjoiYTVlMDFiZDUtZTg0NS00M2I4LTllNDgtYTU4NzRiNDJjNjNhIiwibmFtZSI6ImNvbnRleHQiLCJjb2x1bW5UeXBlIjoiT1VUUFVUIiwiZGF0YVR5cGUiOiJOT01JTkFMIiwibW9kZWwiOiJncHQzNS1kaXJlY3QifSwiY29tcGFyZVNvcnQiOltudWxsLHRydWVdLCJtZXRyaWNSYW5nZSI6WzAsMV0sInNlbGVjdGlvbnMiOnsibWV0YWRhdGEiOnt9LCJzbGljZXMiOltdLCJ0YWdzIjpbXX19) page for browsing our existing results!
+* [10/24/2023] We re-examined the whole dataset and fixed the spotted annotation bugs. The current version ([v0.2.0](https://github.com/web-arena-x/webarena/releases/tag/v0.2.0)) is relatively stable and we don't expect major updates on the annotation in the future. The new results with better prompts and the comparison with human performance can be found in our [paper](https://arxiv.org/abs/2307.13854)
 * [8/4/2023] Added the instructions and the docker resources to host your own WebArena Environment. Check out [this page](environment_docker/README.md) for details.
 * [7/29/2023] Added [a well commented script](minimal_example.py) to walk through the environment setup.
 ## Install
@@ -66,6 +70,9 @@ action = create_id_based_action(f"click [id]")
 obs, _, terminated, _, info = env.step(action)
 ```
 ## End-to-end Evaluation
+> [!IMPORTANT]
+> To ensure the correct evaluation, please setup your own WebArena websites following step 1 and step 2. The demo sites are only for browsing purpose to help you better understand the content. After evaluating the 812 examples, reset the environment to the initial state following the instructions [here](./environment_docker/README.md#environment-reset).
+
 1. Setup the standalone environment.
 Please check out [this page](environment_docker/README.md) for details.
 
@@ -106,8 +113,9 @@ python run.py \
 ```
 This script will run the first example with GPT-3.5 reasoning agent. The trajectory will be saved in `<your_result_dir>/0.html`
 
+
 ## Develop Your Prompt-based Agent
-1. Define the prompts. We provide two baseline agents whose correrponding prompts are listed [here](./agent/prompts/raw). Each prompt is a dictionary with the following keys:
+1. Define the prompts. We provide two baseline agents whose corresponding prompts are listed [here](./agent/prompts/raw). Each prompt is a dictionary with the following keys:
 ```python
 prompt = {
   "intro": <The overall guideline which includes the task description, available action, hint and others>,

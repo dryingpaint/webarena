@@ -1,0 +1,1182 @@
+[Config file]: /tmp/tmpdzmhl3gu/672.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 204, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8772)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 313, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7a90043d12d0>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 276, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 248, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 209, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmp6dwicis_/675.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 204, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8775)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 313, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x76ff2c4c92d0>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 276, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 248, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 209, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: /tmp/tmpwt44fxs_/674.json
+[Unhandled Error] Exception('Failed to connect after maximum retries')
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/agent/agent.py", line 204, in connect
+    return await websockets.connect(uri)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 304, in __wakeup
+    future.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/selector_events.py", line 541, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 8774)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 313, in test
+    action = agent.next_action(
+  File "<@beartype(agent.agent.AlteraAgent.next_action) at 0x7ef9d6cc52d0>", line 84, in next_action
+  File "/home/ubuntu/webarena/agent/agent.py", line 276, in next_action
+    response = asyncio.get_event_loop().run_until_complete(async_next_action())
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/home/ubuntu/miniconda3/envs/webarena/lib/python3.10/asyncio/tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "/home/ubuntu/webarena/agent/agent.py", line 248, in async_next_action
+    ws = await connect()
+  File "/home/ubuntu/webarena/agent/agent.py", line 209, in connect
+    raise Exception("Failed to connect after maximum retries")
+Exception: Failed to connect after maximum retries
+[Config file]: config_files/528.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/352.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/281.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/275.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/323.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/148.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/162.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/386.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/691.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/125.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/286.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/50.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/117.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/362.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/24.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/571.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/433.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/384.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/242.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/301.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/163.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/324.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/513.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/792.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/332.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/279.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/529.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/269.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/325.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/25.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/520.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/147.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/146.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/436.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/320.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/26.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/48.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/572.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/284.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/299.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/264.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/335.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/262.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/795.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/654.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/260.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/328.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/517.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/126.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/145.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/282.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/167.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/438.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/388.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/51.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/271.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/353.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/359.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/385.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/510.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/144.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/469.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/794.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/21.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/143.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/228.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/285.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/231.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/656.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/150.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/368.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/515.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/655.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/432.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/530.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/240.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/233.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/277.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/355.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/274.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/278.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/376.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/574.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/692.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/189.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/327.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/321.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/160.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/227.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/468.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/797.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/512.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/689.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/22.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/149.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/141.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/142.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/431.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/300.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/322.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/333.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/354.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/338.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/336.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/337.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/466.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/190.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/796.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/188.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/588.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/319.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/263.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/514.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/158.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/118.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/437.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/329.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/192.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/351.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/507.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/23.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/798.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/587.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/519.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/191.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/226.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/166.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/96.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/331.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/586.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/439.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/653.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/693.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/361.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/165.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/225.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/238.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/518.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/164.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/573.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/159.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/585.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/261.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/270.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/313.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/326.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/358.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/467.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/334.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/532.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/360.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/589.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/511.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/272.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/283.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/465.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/387.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/575.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/47.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/298.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/235.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/657.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/509.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/690.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/302.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/241.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/516.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/49.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/232.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/161.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/234.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/434.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: config_files/531.json
+[Unhandled Error] AssertionError()
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 283, in test
+    assert os.path.exists(_c["storage_state"])
+AssertionError
+[Config file]: /tmp/tmp_059085j/674.json
+[Unhandled Error] AttributeError("'NoneType' object has no attribute 'reset'")
+Traceback (most recent call last):
+  File "/home/ubuntu/webarena/run.py", line 295, in test
+    agent.reset(config_file)
+AttributeError: 'NoneType' object has no attribute 'reset'

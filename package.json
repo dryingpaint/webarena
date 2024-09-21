@@ -1,0 +1,28 @@
+{
+  "name": "webarena",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">     <img src=\"media/logo.png\" alt=\"Logo\" width=\"80px\">     <br>     <b>WebArena is a standalone, self-hostable web environment for building autonomous agents</b> </p>",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-arena-x/webarena.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-arena-x/webarena/issues"
+  },
+  "homepage": "https://github.com/web-arena-x/webarena#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^22.0.1"
+  },
+  "dependencies": {
+    "websocket": "^1.0.35"
+  }
+}

@@ -1,0 +1,20 @@
+config_file,time,intent,none_actions,elapsed,answer,outcome,trajectory
+Show me the way from Carnegie Mellon University to the home stadium of NYC NBA team ,,33 s,The distance is 626 km and the time is 7:23,PASS,8/5 20:14
+What's the closest national park to the hometown of Stephen King? How long it takes to drive there?,,58 s,"The closest national park to the hometown of Stephen King is Acadia National Park, and it takes 1 hour and 23 minutes to drive there.",PASS,8/5 20:14
+Find the page of the longest bridge in the Western hemisphere on the map.,,81 s,Early stop: Same typing action for 5 times,FAIL,8/5 20:14
+Find the page of the university that has most Turning Award winners on the map.,,93 s,ERROR: too many values to unpack (expected 2),FAIL,8/5 20:15
+Show me the way from Carnegie Mellon University to the home stadium of Boston home NBA team ,,94 s,Early stop: Same typing action for 5 times,PASS,8/5 20:15
+Find the page of the colleges where The Chair was filmed in Pittsburgh on the map.,,105 s,Early stop: Same typing action for 5 times,FAIL,8/5 20:15
+Show me the way from Carnegie Mellon University to the home stadium of Philadelphia 76ers in the 70th,,140 s,Early stop: Same action for 5 times,FAIL,8/5 20:15
+Tell me the distance to drive from Carnegie Mellon University to the top computer science school in massachusetts,,24 s,The distance to drive from Carnegie Mellon University to Massachusetts Institute of Technology is 914km.,PASS,8/5 20:23
+What's the closest national park to the hometown of Stephen King? How long it takes to drive there?,,46 s,"The closest national park to the hometown of Stephen King, Bangor, Maine, is Acadia National Park, and it takes 1 hour and 23 minutes to drive there (as shown in the StaticText with ID 1087 stating 'Distance: 80km. Time: 1:23.').",PASS,8/5 20:23
+Show me the way from Carnegie Mellon University to the home stadium of Philadelphia 76ers ,,54 s,Early stop: Same action for 5 times,FAIL,8/5 20:23
+Show me the way from Carnegie Mellon University to the home stadium of Philadelphia 76ers in the 70th,,59 s,Early stop: Same action for 5 times,FAIL,8/5 20:23
+Show me the way from Carnegie Mellon University to the home stadium of Yankees in the 80th,,93 s,Early stop: Same action for 5 times,FAIL,8/5 20:24
+Find the page of the longest bridge in the Western hemisphere on the map.,,102 s,Early stop: Same typing action for 5 times,FAIL,8/5 20:24
+What's the closest national park to the largest city in Maine?,,112 s,Early stop: Same typing action for 5 times,FAIL,8/5 20:24
+Find the page of the college(s) where The Chair was filmed in Pennsylvania other than the ones in Pittsburgh on the map.,,137 s,N/A,FAIL,8/5 20:25
+Show me the way from Carnegie Mellon University to the home stadium of Boston home NBA team ,,138 s,"The directions from Carnegie Mellon University to TD Garden, the home stadium of Boston's NBA team, are already displayed",PASS,8/5 20:25
+Find the page of the university that has most Turning Award winners on the map.,,199 s,Early stop: Reach max steps 30,FAIL,8/5 20:26
+Find the page of the colleges where The Chair was filmed in Pittsburgh on the map.,,204 s,Early stop: Reach max steps 30,FAIL,8/5 20:26
+"What's the closest national park to Vinalhaven, ME? How long does it take to bike there?",,223 s,Early stop: Reach max steps 30,FAIL,8/5 20:26

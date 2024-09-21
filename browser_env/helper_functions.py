@@ -5,7 +5,6 @@ import re
 from pathlib import Path
 from typing import Any
 
-from beartype import beartype
 from PIL import Image
 
 from agent.prompts import *
@@ -35,7 +34,6 @@ HTML_TEMPLATE = """
 """
 
 
-@beartype
 def get_render_action(
     action: Action,
     observation_metadata: dict[str, ObservationMetadata],
@@ -63,7 +61,6 @@ def get_render_action(
     return action_str
 
 
-@beartype
 def get_action_description(
     action: Action,
     observation_metadata: dict[str, ObservationMetadata],
@@ -129,14 +126,14 @@ class RenderHelper(object):
 
         self.action_set_tag = action_set_tag
 
-        self.render_file = open(
-            Path(result_dir) / f"render_{task_id}.html", "a+"
-        )
-        self.render_file.truncate(0)
-        # write init template
-        self.render_file.write(HTML_TEMPLATE.format(body=f"{_config_str}"))
-        self.render_file.read()
-        self.render_file.flush()
+        # self.render_file = open(
+        #     Path(result_dir) / f"render_{task_id}.html", "a+"
+        # )
+        # self.render_file.truncate(0)
+        # # write init template
+        # self.render_file.write(HTML_TEMPLATE.format(body=f"{_config_str}"))
+        # self.render_file.read()
+        # self.render_file.flush()
 
     def render(
         self,
@@ -157,7 +154,7 @@ class RenderHelper(object):
         if render_screenshot:
             # image observation
             img_obs = observation["image"]
-            image = Image.fromarray(img_obs)
+            image = Image.fromarray(img_obs)  # type:ignore
             byte_io = io.BytesIO()
             image.save(byte_io, format="PNG")
             byte_io.seek(0)
@@ -179,16 +176,17 @@ class RenderHelper(object):
         new_content += f"{action_str}\n"
 
         # add new content
-        self.render_file.seek(0)
-        html = self.render_file.read()
-        html_body = re.findall(r"<body>(.*?)</body>", html, re.DOTALL)[0]
-        html_body += new_content
+        # self.render_file.seek(0)
+        # html = self.render_file.read()
+        # html_body = re.findall(r"<body>(.*?)</body>", html, re.DOTALL)[0]
+        # html_body += new_content
 
-        html = HTML_TEMPLATE.format(body=html_body)
-        self.render_file.seek(0)
-        self.render_file.truncate()
-        self.render_file.write(html)
-        self.render_file.flush()
+        # html = HTML_TEMPLATE.format(body=html_body)
+        # self.render_file.seek(0)
+        # self.render_file.truncate()
+        # self.render_file.write(html)
+        # self.render_file.flush()
 
     def close(self) -> None:
-        self.render_file.close()
+        pass
+        # self.render_file.close()
